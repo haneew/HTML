@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        thead tr{
+            background-color: black;
+            color: white;
+        }
+        tbody tr{
+            background-color: #f5f6f7;
+            color: black;
+        }
+        table td,
+        table th {
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>테이블 태그 (표 만들기)</h1>
+    <hr>
+
+    <table align="center" width="700">
+        <thead>
+            <tr>
+                <th>태그</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>table</td>
+                <td>표의 시작과 끝을 나타낸다</td>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>table 내부의 한 줄을 생성한다 (table row)</td>
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>tr 내부의 한 칸을 생성한다 (table data, cell)</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>td처럼 칸을 생성한다. 강조되면서 가운데 정렬한다 (table headline)</td>
+            </tr>
+            <tr>
+                <td>thead</td>
+                <td>표를 상중하로 나누고 싶을때 상단을 나타내기 위해 사용한다</td>
+            </tr>
+            <tr>
+                <td>tbody</td>
+                <td>표를 상중하로 나누고 싶을때 내용을 나타내기 위해 사용한다</td>
+            </tr>
+            <tr>
+                <td>tfoot</td>
+                <td>표를 상중하로 나누고 싶을때 하단을 나타내기 위해 사용한다</td>
+            </tr>
+            <tr>
+                <td>
+                    td내부에 글자 혹은 다른 태그를 사용하면 된다<br>
+                </td>
+                <td>
+                    <img src="../day26/짱구/짱구.png" width="50"><br>
+                    <table>
+                        <tr>
+                            <td>이름 : 짱구</td>
+                            <td>나이 : 5</td>
+                        </tr>
+                        <tr>
+                            <td>이름 : 지우</td>
+                            <td>나이 : 15</td>
+                        </tr>
+                        <tr>
+                            <td>이름 : 가영이</td>
+                            <td>나이 : 17</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

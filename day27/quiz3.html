@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;  /* 글자 꾸밈 요소를 제거한다 (밑줄 없음) */
+            color: inherit;         /* 글자 색상은 상위 요소의 색상 그대로 사용한다 */
+        }
+        a:hover {
+            text-decoration: underline; /* 마우스 올리면 밑줄이 만들어진다 */
+        }
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            background-color: rgb(255, 227, 238);
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 5px;
+            font-size: 14;
+        }
+        td.hidden {
+            background-color: white;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>돼지고기(name.wiki)</h1>
+    <hr>
+
+    <table id="pork">
+        <tr>
+            <td rowspan="3"><a href="">돼지머리</a></td>
+            <td><a href="">목살</a></td>
+            <td rowspan="2"><a href="">가브리살</a></td>
+            <td rowspan="2"><a href="">등심</a></td>
+            <td rowspan="4"><a href="">뒷다리살</a></td>
+        </tr>
+        <tr>
+            <!--돼지머리-->
+            <td><a href="">항정살</a></td>
+            <!--<td>가브리살</td>-->
+            <!--<td>등심</td>-->
+            <!--<td>뒷다리살</td>-->
+          
+        </tr>
+        <tr>
+            <td><a hred="">갈비</a></td>
+            <td><a hred="">갈매기살</a></td>
+            <td><a hred="">안심</a></td>
+        </tr>
+        <tr>
+            <td class="hidden"></td>
+            <td><a hred="">앞다리살</a></td>
+            <td colspan="2"><a hred="">삼겹살</a></td>
+            <!--<td>삼겹살</td>-->
+            <!--<td>뒷다리살</td>-->
+        </tr>
+        <tr>
+            <td class="hidden"></td>
+            <td><a hred="">돈족</a></td>
+            <td class="hidden"></td>
+            <td class="hidden"></td>
+            <td><a hred="">돈족</a></td>
+        </tr>
+    </table>
+
+
+
+
+    </table>
+
+
+
+
+
+
+</body>
+</html>
