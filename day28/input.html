@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-input.html</title>
+    <style>
+        table {
+            border: 2px solid black;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        td, th {
+            padding: 5px 10px;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>input.html</h1>
+    <hr>
+
+    <h3>사용자의 입력값을 서버에 전송하기 위한 요소. form과 연계하여 사용한다</h3>
+
+    <table>
+        <tr>
+            <th>태그</th>
+            <th>type</th>
+            <th>특징</th>
+            <th>예시</th>
+        </tr>
+        <tr>
+            <td rowspan="10">input</td>
+            <td>text</td>
+            <td>일반적인 텍스트를 입력받는다</td>
+            <td><input type="text" name="greeting" value="하이" placeholder="글자 입력"></td>
+            <!--여러 값을 전달하기 위해서 변수 이름의 개념이 필요하다 name, value / 벨류값을 설정 안해놓으면 페이지입력값이 곧 벨류값이다.-->
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>마스킹된 텍스트를 입력받는다</td>
+            <td><input type="password" placeholder="비밀번호 입력"></td>
+        </tr>
+        <tr>
+            <td>number</td>
+            <td>숫자를 입력받는다</td>
+            <td><input type="number" placeholder="숫자 입력"></td>
+        </tr>
+        <tr>
+            <td>date</td>
+            <td>날짜를 입력받는다</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td>range</td>
+            <td>마우스로 범위사이의 숫자를 입력받는다</td>
+            <td><input type="range" min="0" max="100" value="1"></td>
+        </tr>
+        <tr>
+            <td>file</td>
+            <td>사용자의 첨부파일을 입력받는다</td>
+            <td><input type="file"></td> 
+            <!--1)value값을 지정할 수 없다. 2)유일하게String이 아니다.-->
+        </tr>
+        <tr>
+            <td>radio</td>
+            <td>여러 요소 중 하나를 선택하여 입력받는다</td>
+            <td>
+                <!--label은 생성한 개체와 값을 묶어둬서 출력글자를 눌러도 선택이 되도록 한다.-->
+                <label><input type="radio" name="adult" value="true">성인</label>
+                <label><input type="radio" name="adult" value="false">미성년자</label>
+            </td>
+        </tr>
+        <tr>
+            <td>checkbox</td>
+            <td>여러 요소중 해당하는 값을 복수 선택하여 입력받는다</td>
+            <td>
+                <label><input type="checkbox" name="pet_type" value="dog">강아지</label>
+                <label><input type="checkbox" name="pet_type" value="cat">고양이</label>
+                <label><input type="checkbox" name="pet_type" value="turtle">거북이</label>
+            </td>
+        </tr>
+        <tr>
+            <td>hidden</td>
+            <td>이름과 값이 정해져있으나, 시각적으로 보이지 않는다 (display: none)</td>
+            <td>
+                <input type="hidden" name="csrf_token" value="abcdefghi">
+            </td>
+        </tr>
+        <tr>
+            <td>color</td>
+            <td>색상값을 입력받는다</td>
+            <td>
+                <input type="color">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">select</td>
+            <td>여러 선택지 중 하나를 입력받는다 (radio와 방식이 유사하다)</td>
+            <td>           
+                <select name="lang">
+                    <option value="">=== 언어를 선택하세요 ===</option>
+                    <option value="korean">한글</option>
+                    <option value="chinese">中文</option>
+                    <option value="japanese">日本語</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">textarea</td>
+            <td>여러 줄로 구성된 텍스트를 입력받는다</td>
+            <td>
+                <textarea name="content" placeholder="내용을 입력하세요"></textarea>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

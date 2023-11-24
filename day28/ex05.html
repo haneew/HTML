@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            background-color: darkgrey;
+            color: lime;
+            font-weight: bold;
+            font-family: 'Consolas';
+            font-size: 20px;
+        }
+        summary {
+            margin-bottom: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <h1>input:range</h1>
+    <hr>
+
+    <details open>
+        <summary>range 기본형식</summary>
+        <fieldset>
+            &lt;input type="range" min="0" max="10" step="1">
+            <p><input type="range" min="0" max="10" step="1"></p>
+        </fieldset>
+    </details>
+
+    <details>
+        <summary>range + datalist</summary>
+        <fieldset>
+            <style>
+                datalist#values {
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-between;
+                    writing-mode: vertical-lr;
+                    width: 200px;
+                }
+                input[list="values"] {
+                    width: 200px;
+                }
+            </style>
+            <p>
+                <input type="range" min="1" max="5" step="1" list="values">
+                <datalist id="values"> <!-- datalist 이 중에 하나 골라라-->
+                    <option value="1" label="매우 미흡"></option>
+                    <option value="2" label="미흡"></option>
+                    <option value="3" label="보통"></option>
+                    <option value="4" label="우수"></option>
+                    <option value="5" label="매우 우수"></option>
+                </datalist>
+            </p>
+        </fieldset>
+    </details>
+
+    <details open>
+        <summary>수직 range + js</summary>
+        <style>
+            input[name="vol"] {
+                appearance: slider_vertical;
+            }
+        </style>
+
+        <fieldset>
+            <input type="range" name="vol" id="vol" min="0" max="100" step="1">
+            볼륨 : <span id="volValue">50</span>
+        </fieldset>
+        <script>
+           vol.oninput = e => volValue.innerText = e.target.value
+        </script>
+    </details>
+</body>
+</html>

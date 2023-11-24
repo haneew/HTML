@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>input + datalist</h1>
+    <hr>
+    <ul>
+        <li>input의 value는 직접 입력하는 값</li>
+        <li>input의 value에 들어갈 값을 미리 리스트로 준비해서 추천할 수 있음</li>
+    </ul>
+    
+    <p>
+        <input type="text" name="name" list="names" autocomplete="off">
+        <!-- input의 list값과 datalist의 id값이 같아야한다-->
+        <datalist id="names">
+            <option value="강원지"></option>
+            <option value="김민서"></option>
+            <option value="김유빈"></option>
+            <option value="김윤영"></option>
+            <option value="박재영"></option>
+            <option value="배진호"></option>
+            <option value="신유진"></option>
+            <option value="오예랑"></option>
+            <option value="옥창혁"></option>
+            <option value="왕제은"></option>
+            <option value="유형주"></option>
+            <option value="이경용"></option>
+            <option value="이동훈"></option>
+            <option value="정다빈"></option>
+            <option value="정승호"></option>
+            <option value="정진석"></option>
+            <option value="최현웅"></option>
+            <option value="한동근"></option>
+            <option value="황상기"></option>
+            <option value="황은정"></option>
+        </datalist>
+    </p>
+</body>
+</html>

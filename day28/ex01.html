@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>input 연습</h1>
+    <hr>
+
+    <ul>
+        <li>input 태그는 대부분 form태그 내부에 배치하여 사용한다</li>
+        <li>input 태그는 사용자 입력 편의성을 위해 type을 변겨할 수 있다</li>
+        <li>type을 지정하지 않으면 기본은 type="text"이다</li>
+        <li>form 태그의 action 속성은 입력값을 보낼 서버의 경로이다</li>
+    </ul>
+
+    <!-- vscode 주석 처리하기 : ctrl + k + c -->
+    <!-- vscode 주석 해제하기 : ctrl + k + u -->
+    <form action="http://search.naver.com/search.naver">
+        <p><input type="text" name="query" placeholder="네이버 검색어 입력"
+            required="required"></p>
+            <!-- 속성과 값이 동일할 경우 required걸고 내부값 설정이 불필요하다-->
+        <!--<p><input type="text" name="where" placeholder="image,news,kin"></p>-->
+        <!-- <p>
+            <label><input type="radio" name="where" value="image">이미지</label>
+            <label><input type="radio" name="where" value="news">뉴스</label>
+            <label><input type="radio" name="where" value="kin">지식iN</label>
+        </p> -->
+        
+        <p>
+            <select name="where">
+                <option value="">통합검색</option>
+                <option value="image">이미지</option>
+                <option value="news">뉴스</option>
+                <option value="kin">지식iN</option>
+            </select>
+        </p>
+
+        <p><input type="submit" value="검색"></p>
+    </form>
+
+
+</body>
+</html>
