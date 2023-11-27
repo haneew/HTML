@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            margin: 10px;
+
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>flex</h1>
+    <hr>
+    <h3>내부 block요소를 가로로 배치하는 display</h3>
+
+    <!-- vscode에서 ctral + \ 하면 한 파일을 두개의 편집창으로 분리 -->
+    <div style="display: block;">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+
+    <div style="display: flex;">
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+    <div style="display: flex; justify-content: flex-end;">
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between;">
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-around;">
+        <div class="box">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-evenly;">
+        <div class="box">19</div>
+        <div class="box">20</div>
+        <div class="box">21</div>
+    </div>
+    
+
+</body>
+</html>
