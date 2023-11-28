@@ -1,51 +1,81 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>quiz1.html</title>
     <style>
+        body > div {
+            /* border: 1px dashed red; */
+            width: 900px;
+            margin: 10px auto;
+            padding: 10px;
+        }
+        body > div > div {
+            /* border: 1px dashed green; */
+        }
         div.top {
-            width: 1000;
             display: flex;
             justify-content: space-between;
         }
-        ul {
+        div.top > div.right > ul {
             display: flex;
-            border: 1px solid black; 
-
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
-        ul > li {
-            font-size: 12px;
-            margin: 10px 70px 10px 0px;
+        div.top > div.right > ul > li {
+            margin: 0 5px;
+        }
+        div.mid > img {
+            width: 100%;
+        }
+        div.bottom {
+            border: 1px solid #ddd;
+        }
+        div.bottom > ul {
+            display: flex;
             padding-left: 0;
+            overflow: hidden;   /* 영역을 벗어나는 내용은 숨긴다 (스크롤바도 없앤다) */
         }
-        
+        div.bottom > ul > li {
+            margin-right: 25px;
+        }
     </style>
 </head>
 <body>
     
     <div class="top">
-        <div>NAVER</div>
-
-
-        <div>
-            <span>카페홈</span>
-            <span>이웃</span>
-            <span>가입카페</span>
-            <span>새글</span>
-            <span>내소식</span>
-            <span>내소식</span>
-            <span>로그인</span>
+        <div class="left">NAVER</div>
+        <div class="right">
+            <ul>
+                <li>카페홈</li>
+                <li>이웃</li>
+                <li>
+                    <select style="border: 0;">
+                        <option>가입카페</option>
+                        <option>스타벅스</option>
+                        <option>텐퍼센트</option>
+                        <option>컴포즈커피</option>
+                        <option>할리스커피</option>
+                        <option>블루샥</option>
+                    </select>
+                </li>
+                <li>새글</li>
+                <li>내소식</li>
+                <li>채팅</li>
+                <li><button>로그인</button></li>
+                <li><button>⁝</button></li>
+            </ul>
         </div>
     </div>
 
-
-    <div >
-        <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA2MjVfMzAg%2FMDAxNjU2MTY3MzIxOTAx.UuQXVYAMXinpqfrJIytHyLAr250ayCEkMUvm23XF7_kg.sFuaXiJutLC_OWZ_fvxqMKmiMT7vyFDx9RNgpTrRfKMg.JPEG.neno904%2F%25B7%25AF%25BD%25C3%25BE%25C6_%25B9%25E3_%25B0%25F8%25BF%25F8.JPG&type=sc960_832" width="800px" height="450px">
+    <div class="mid">
+        <img src="https://cafeptthumb-phinf.pstatic.net/MjAyMzA4MThfMjcy/MDAxNjkyMzMzODEyOTIz.vFH50d_VJS1dyq7AEQGjdwSzaE8rF3_hkZqhuEeuh1gg.1wLYJTbPMZsStALjmPmhyont_bL5I9Vyo_r7j4oJb2Ug.JPEG/%EC%BA%A0%ED%95%91%ED%8D%BC%EC%8A%A4%ED%8A%B8%EB%8C%80%EB%AC%B8.jpg">
     </div>
 
-    <div class="list">
+    <div class="bottom">
         <ul>
             <li>전체글보기</li>
             <li>인기글</li>
@@ -55,6 +85,6 @@
         </ul>
     </div>
 
-
+    
 </body>
 </html>
