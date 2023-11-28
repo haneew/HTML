@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">flex 예시</h1>
+    <hr>
+    <fieldset>
+        <legend><strong>여러 요소를 가로로 배치하고 싶을때</strong></legend>
+        <div style="display: flex;">  <!-- 기본적인 사용방식 -->
+            <div style="border: 1px solid black; padding:  5px; margin: 5px;">홈</div>
+            <div style="border: 1px solid black; padding:  5px; margin: 5px;">카페</div>
+            <div style="border: 1px solid black; padding:  5px; margin: 5px;">메일</div>
+        </div>
+    </fieldset>
+    <br><br>
+
+
+
+
+    <fieldset>
+        <legend><strong>일정 너비 안에서 양옆으로 배치할 때</strong></legend>
+        <div style="display: flex; justify-content: space-between;">
+            <div class="left">LOGO</div>
+            <div class="right" style="display: flex;
+                                     width: 400px;
+                                     justify-content: space-around;">
+                <button>HOME</button>
+                <button>나의 정보</button>
+                <button>회원관리</button>
+                <button>문자전송</button>
+                <button>로그아웃</button>
+            </div>
+        </div>
+    </fieldset>
+    <br><br>
+
+
+
+    <fieldset>
+        <legend><strong>일정 너비 안에서 꽉 채워서 분할하고 싶을 때</strong></legend>
+        <div style="width: 500px; display: flex; text-align: center; margin: auto;">
+            <div style="border: 1px solid grey; flex: 1;">ID 로그인</div>
+            <div style="border: 1px solid grey; flex: 1;">일회용 번호</div>
+            <div style="border: 1px solid grey; flex: 1;">QR 코드</div>
+
+        </div>
+    </fieldset>
+    <br><br>
+
+
+
+
+
+
+    <fieldset>
+        <legend><strong>상하좌우 한 가운데 배치하고 싶을 때</strong></legend>
+        <div style="display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 500px;
+                    height: 600px;
+                    margin: auto;">
+            <div>
+                <img src="권나라.jpeg">
+                <h3 style="width: fit-content;">권나라</h3> <!-- fit-content 는 높이/너비 모두 적용가능하다 -->
+            </div>
+        </div>
+    </fieldset>
+    <br><br>
+
+
+
+
+
+    <fieldset>
+        <legend><strong>여러 아이템을 바둑판식 나열하고 싶을때</strong></legend>
+        <div style="display: flex;
+                    flex-flow: wrap;
+                    width: 500px;
+                    margin: auto;">
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+            <div><img src="권나라.jpeg" width="100" style="margin: 10px;"></div>
+        </div>
+    </fieldset>
+    <br><br>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.box {
+            border: 1px solid black;
+            width: 1000px;
+            height: 900px;
+        }
+        div.title {
+            height: 80px;
+            border: 1px solid black;
+            margin: 10px;
+            padding-left: 10px;
+        }
+
+        div.main {
+            display: flex;
+            height: 500px;
+            justify-content: space-around;
+            border: 1px solid white;
+        }
+        div.left {
+            flex: 1;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+        }
+        div.mid {
+           flex: 3;
+           border: 1px solid black;
+           margin: 10px;
+           padding: 10px;
+        }
+        div.right {
+            flex: 1;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 10px;
+            height: fit-content;
+           
+        }
+        div.bottom {
+            height: 200px;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        div.side { 
+            padding-left: 10px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <!-- 상단 -->
+        <div class="title"><h1>사이트 제목</h1></div>
+    
+        <!--                   메인                  -->
+        <div class="main">
+            <!-- 왼쪽바 -->
+            <div class="left">
+                <ul>
+                    <div class="side";"><h3>사이드바</h3></div>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascipt</li>
+                </ul>
+
+            </div>
+            
+            <!-- 메인 내용-->
+            <div class="mid">
+                <br>
+                <div style="font-size: 25px; font-weight: bold;">본문</div>
+                <br>
+                <div>가나다라마바사</div>
+
+            </div>
+           
+            <!-- 오른쪽바 -->
+            <div class="right">
+                <ul>
+                    <div class="side" style="font-size: 20px; font-weight: bold;">사이드바</div>
+                    <li>항목1</li>
+                    <li>항목2</li>
+                    <li>항목3</li>
+                    <li>항목4</li>
+                </ul>
+            </div>
+        <!--               메인 끝                    -->
+        </div>
+
+        <!-- 하단 -->
+        <div class="bottom">
+            <div style="font-size: 20px; font-weight: bold;">하단</div>
+            <div>저작권 정보</div>
+            <div>연락처 등</div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>

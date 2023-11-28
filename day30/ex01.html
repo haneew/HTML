@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.flex{
+            display: flex;
+            border: 2px solid black;
+        }
+        div.item {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: red;
+            font-size: 40px;
+            text-align: center;
+            color: white;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>flex</h1>
+    <h3>flex : 내부 요소를 정렬하기 위한 display 속성</h3>
+
+    <div class="flex">      <!-- 기본 : 중심축 row -->
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>flex-direction : flex 요소의 중심축 (main-axis)의 방향을 결정</h3>
+
+    <div class="flex" style="flex-direction: column; height: 500px;         
+                            justify-content: center;
+                            align-items: flex-end;">  <!-- 중심축 : column, 축중심 가운데 정렬 -->
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <!-- justify-content : 좌우정렬(x) 중심축정렬(o) : 좌우 정렬은 맞지만 중심축이 기준이 된다 -->
+
+</body>
+</html>

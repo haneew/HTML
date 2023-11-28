@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            position: relative;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-image: url('권나라.jpeg');
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        p {
+            font-size: 24px;
+        }
+        div.main {
+            position: absolute;
+            border-bottom: 1px solid red;
+            width: 100%;
+            top: 50%;
+        }
+        div.cross { 
+            position: absolute;
+            border-left: 1px solid blue;
+            height: 100%;
+            left: 50%;
+        }
+        </style>
+</head>
+<body>
+    
+    <h1>기본 상태에서의 가로/세로 정렬</h1>
+    <hr>
+    
+    <div class="box">
+        <div class="item"></div>
+        <div class="main"></div>
+        <div class="cross"></div>
+    </div>
+
+    <fieldset>
+        <p>flex;</p>
+        <p>justify-content: <span id="jc">flex-start</span>;</p>
+        <p>align-items<span id="ai">flex-start</span>;</p>
+    </fieldset>
+
+    <p>
+        <strong>justify-content</strong> :
+        <label>
+            <input type="radio" name="jc" value="flex-start" checked>flex-start
+        </label>
+        <label>
+            <input type="radio" name="jc" value="center">center
+        </label>
+        <label>
+            <input type="radio" name="jc" value="flex-end">flex-end
+        </label>
+    </p>
+
+    <p>
+        <strong>align-items</strong> :
+        <label>
+            <input type="radio" name="ai" value="flex-start" checked>flex-start
+        </label>
+        <label>
+            <input type="radio" name="ai" value="center">center
+        </label>
+        <label>
+            <input type="radio" name="ai" value="flex-end">flex-end
+        </label>
+    </p>
+
+    <script>
+        document.querySelectorAll('input[name="jc"]').forEach(e =>{
+            e.onclick = function(event) {
+                const box = document.querySelector('div.box')
+                box.style.justifyContent = event.target.value
+                const span = document.getElementById('jc')
+                span.innerText = event.target.value
+            }
+        })
+        document.querySelectorAll('input[name="ai"]').forEach(e =>{
+            e.onclick = function(event) {
+                const box = document.querySelector('div.box')
+                box.style.alignItems = event.target.value
+                const span = document.getElementById('ai')
+                span.innerText = event.target.value
+            }
+        })
+    </script>
+
+
+</body>
+</html>

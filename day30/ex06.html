@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid lightgrey;
+        }
+        tr > td:nth-child(3) {
+            width: 200px;
+        }
+        div.red{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+        }
+        div.blue{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>position</h1>
+    <hr>
+    <table>
+        <tr>
+            <td>static</td>
+            <td>기본값, 주변 요소에 맞춰 자리를 배정한다</td>
+            <td>
+                <div class="box">
+                    <div class="red">red</div>
+                    <div class="blue">blue</div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>relative</td>
+            <td>원래 위치에서 상대적인 위치를 지정한다</td>
+            <td>
+                <div class="box">
+                    <div class="red"
+                    style="position: relative;
+                            z-index: 0;">red</div>
+                    <div class="blue"
+                         style="position: relative;
+                                top: -30px;
+                                left: 30px;
+                                z-index: 1;">blue</div>
+                                
+            </td>
+        </tr>
+
+        <tr>
+            <td>absolute</td>
+            <td>
+                기준이 되는 상위요소를 지정하여 절대적 위치를 지정한다<br>
+                기준을 지정하지 않으면 body가 기준이 된다<br>
+                보통, 가장 가까운 상위요소(부모요소)에 relative를 지정하여 기준으로 삼는다
+            </td>
+            <td>
+                <div class="box" style="position: relative;">
+                    <div class="blue"
+                    style="position: absolute;
+                                top: 20px;
+                                right: 0px;">blue</div>
+            </td>
+            <div class="red" style="position: absolute;
+                                    top: 10px;
+                                    right: 10px;">red</div>
+
+        </tr>
+
+        <tr>
+            <td>fixed</td>
+            <td>스크롤에 상관없이 항상 고정된 위치를 지정한다</td>
+            <td>
+                <div class="box">
+                    <div class="red">red</div>
+                    <div class="blue"
+                         style="position: fixed;
+                                right: 50px;
+                                bottom: 10px;">blue</div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>sticky</td>
+            <td>평소에는 static처럼 움직이다가 스크롤에서 걸리면 fixed와 같은 위치를 가진다</td>
+            <td>
+                예시는 아래에
+            </td>
+        </tr>
+
+
+    </table>
+
+
+    <div style="position: sticky;
+                top: 50px;
+                background-color: antiquewhite;
+                opacity: 0.8;">
+        <h3>Hello, world !!</h3>
+    </div>
+
+    <div style="height: 2000px; 
+                width: 100%; 
+                background: linear-gradient(to bottom, white, navy);"></div>
+
+
+
+
+</body>
+</html>

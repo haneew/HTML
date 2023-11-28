@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.root {
+            width: 700px;
+            margin: auto;
+        }
+        p.target {
+            border: 1px solid black;
+
+            /* display: none; */         /* 완벽하게 사라졌다가 버튼에 마우스가 올라가면 생긴다 */
+        
+            /*opacity: 0;  */           /* 안보이게 했다가 나타나는건 같지만 글의 자리차지가 보인다. */
+           
+            /* visibility: hidden; */
+
+            height: 0;
+
+            overflow: hidden;
+            transition-duration: 0.2s;
+             
+        }
+        div.root > p:first-child:hover + p.target {
+          /* display: block; */
+
+          /* opacity: 1; */
+          
+          /* visibility: visible; */
+          
+          height: 63px;
+          transition-duration: 1s;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>display: none</h1>
+    <hr>
+
+    <h3>모습이 보이지 않는다. 화면상의 자리차지도 없어진다</h3>
+
+    <div class="root">
+        <p><button>버튼</button></p>
+        <p class="target">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ad quis ipsam pariatur itaque at nisi ea aperiam repellendus, asperiores adipisci earum! Rem odio unde corrupti, non perferendis temporibus saepe.
+        </p>
+        <p><img src="권나라.jpeg" width="300"></p>
+    </div>
+</body>
+</html>
