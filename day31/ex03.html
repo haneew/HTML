@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        td, th {
+            padding: 10px;
+            border: 1px solid grey;
+        }
+        img {
+            height: 100px;
+        }
+        /* 속성의 값에 따라 스타일을 지정할 수 있다는 것을 확인 */
+        img[src^="짱"] {
+            border: 3px solid red;
+        }
+        /* 이름에 짱이 들어가면 빨간테두리를 준다 */
+        img[src$="png"] {
+            background-color: lightgoldenrodyellow;
+        }
+        /* png 파일이면 배경색을 바꾼다 */
+        img[src$="jpg"] {
+            border-radius: 20px;
+        }
+        /* jpg 파일이면 테두리를 둥글게 한다. */
+    </style>
+</head>
+<body>
+
+    <h1>문자열 속성 선택자</h1>
+    <hr>
+    
+    <table id="table">
+        <tr>
+            <th>선택자</th>
+            <th>예시</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>문자열 속성 선택자</td>
+            <td>선택자[속성^="값"] {...}</td>
+            <td>속성이 특정 값으로 시작하는 요소 선택</td>
+        </tr>
+        <tr>
+            <td>문자열 속성 선택자</td>
+            <td>선택자[속성$="값"] {...}</td>
+            <td>속성이 특정 값으로 끝나는 요소 선택</td>
+        </tr>
+        <tr>
+            <td>문자열 속성 선택자</td>
+            <td>선택자[속성!="값"] {...}</td>
+            <td>속성이 일치하지 않는 요소 선택</td>
+        </tr>
+    </table>
+
+
+    <p><img src="짱구.png"></p>
+    <p><img src="짱아.png"></p>
+    <p><img src="유리.png"></p>
+    <p><img src="danbi.png"></p>
+    <p><img src="danbi.jpg"></p>
+</body>
+</html>

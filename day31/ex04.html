@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex04.html</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        td, th {
+            padding: 10px;
+            border: 1px solid grey;
+        }
+    </style>
+</head> 
+<body>
+    <h1>동위 선택자</h1>
+    <hr>
+    <h3>Tree구조에서 형제노드에 해당하는 요소를 선택한다</h3>
+
+    <table>
+        <tr>
+            <td>A + B</td>
+            <td>h3 + h4</td>
+            <td>A 바로 다음 요소 B를 선택</td>
+        </tr>
+        <tr>
+            <td>A ~ B</td>
+            <td>h3 ~ h4</td>
+            <td>A의 동위 요소 B들을 선택</td>
+        </tr>
+    </table>
+
+    <style>
+        h3 ~ h4 {
+            padding: 10px;
+            border-bottom: 2px solid pink;
+            width: fit-content;
+        }
+        h3 + h4 {
+            background-color: red;
+        }
+        /* div > h3.test +h4 이런 형식으로 상세하게 부여할 수 있다. */
+
+    </style>
+    <div>
+        <h3>떡잎마을 유치원</h3>
+        <h4>짱구</h4>
+        <!-- 짱구는 h3뒤에 있는 바로 다음 요소이기 때문에 
+            기존의 스타일속성을 받고 그 위에 배경색 스타일이 덮어진다 -->
+        <h4>유리</h4>
+        <h4>철수</h4>
+        <h4>맹구</h4>
+        <h4>훈이</h4>
+        <!-- 나머지 요소들은 h3 ~ h4 스타일 값만 적용받는다  -->
+    </div>
+    <div>
+        <!-- 속성 적용 받지 않는다 : h3다음에 있는 요소가 아니기 때문에 -->
+        <h4>흰둥이</h4>     
+    </div>
+</body>
+</html>

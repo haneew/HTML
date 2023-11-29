@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01.html</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        td, th {
+            padding: 10px;
+            border: 1px solid grey;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <h1>css selector</h1>
+    <hr>
+    <h3>선택자 : 문서에서 특정 요소 하나 혹은 여러개를 선택하는 구문</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>선택자</th>
+                <th>예시</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>태그 선택자</td>
+                <td>a { ... }</td>
+                <td>태그이름으로 문서 내 모든 태그요소를 선택한다</td>
+            </tr>
+            <tr>
+                <td>id 선택자</td>
+                <td>#root { ... }</td>
+                <td>미리 부여한 id로 특정 요소 하나를 선택한다</td>
+            </tr>
+            <tr>
+                <td>class 선택자</td>
+                <td>.item { ... }</td>
+                <td>미리 부여한 class로 여러 요소를 선택한다</td>
+            </tr>
+            <tr>
+                <td>자손 선택자</td>
+                <td>ul > li { ... }</td>
+                <td>A요소 바로 아래 포함된 B를 선택한다</td>
+            </tr>
+            <tr>
+                <td>후손 선택자</td>
+                <td>ul a { ... }</td>
+                <td>A요소 아래 포함된 B를 선택한다. 여러 단계를 포함한다</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

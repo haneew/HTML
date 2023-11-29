@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+
+        }
+        a.pink {
+            color: hotpink;
+        }
+        body > div {
+            /* border:  2px dashed grey; */
+        }
+       body > div > div {
+        /* border: 2px dashed orangered; */
+       }
+       body > div > div > div {
+        /* border: 2px dashed green; */
+       }
+       .frame {
+        width: 1400px;
+        margin: 0 auto;
+       }
+       .sb {
+        display: flex;
+        justify-content: space-between;
+       }
+       .center { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       ul {
+        list-style: none;
+        padding-left: 0;
+       }
+       .top > .frame > .left > ul.sb {
+        width: 500px;
+       }
+       .top > .frame > .right > ul.sb {
+        width: 300px;
+       }
+       .icon > ul.sb {
+        width: 100px;
+       }
+       .nav > .sb > div {
+        width: 50px;
+        /* flex: 1; */
+       }
+       .nav > .sb > ul.sb {
+        width: 100%;
+        /* flex: 25; */
+       }
+       .banner.img {
+
+       }
+    </style>
+
+</head>
+<body>
+    <div class="top">
+        <div class="frame sb">
+            <div class="left">
+                <ul class="sb">
+                    <li><a href="">LOGIN</a></li>
+                    <li><a href="">JOIN US</a></li>
+                    <li><a href="">CART</a></li>
+                    <li><a href="">ORDER</a></li>
+                    <li><a href="">MY PAGE</a></li>
+                    <li><a href="">BOOKMARK</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul class="sb">
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">상품문의</a></li>
+                    <li><a href="#">상품후기</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo">
+        <div class="frame center">
+            <h1>D'ARLES</h1>
+        </div>
+    </div>
+    <div class="icon-and-search">
+        <div class="frame sb">
+            <ul class="sb">
+                <li><a href="#">페</a></li>
+                <li><a href="#">인</a></li>
+                <li><a href="#">유</a></li>
+            </ul>
+        </div>
+        <div class="search center">
+            <input type="search">
+            🔍
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="frame sb">
+            <div>🎂</div>
+            <ul class="sb">
+                <li><a href="#">RONA unoverse</a></li>
+                <li><a href="#">남성의류</a></li>
+                <li><a href="#">아우터</a></li>
+                <li><a href="#">탑</a></li>
+                <li><a href="#">드레스</a></li>
+                <li><a href="#">바텀</a></li>
+                <li><a href="#">악세서리</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="frame">
+            <img src="https://darles.co.kr/web/upload/NNEditor/20210504/0bf1a699ea515735d0841f86daa11cc0.jpg" alt="서유리">
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>

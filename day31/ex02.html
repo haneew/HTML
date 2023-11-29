@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02.html</title>
+    <style>
+        #table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid darkgray;
+            padding: 10px;
+        }
+        input[type="text"] {
+            all: unset;
+            width: 200px;
+            padding: 10px;
+            border: 0;
+            border-bottom: 2px solid grey;
+        }
+        input[name="writer"] {     /* 기존의 text의 border-bottom 값에 덮어씌움. 즉 text style위에 위치한다면 적용되지 않는다*/
+            border-bottom: 2px solid hotpink;
+        }
+        input[type="password"] {
+            all: unset;
+            width: 200px;
+            padding: 10px;
+            background-color: rgba(255, 128, 0, 0.2);
+        }
+        input[type="reset"] {
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+            border: 0px;
+            padding: 10px;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border-radius: 20px;
+            border: 0px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>css selector</h1>
+    <hr>
+    <table id="table">
+        <tr>
+            <th>선택자</th>
+            <th>예시</th>
+            <th>설명</th>
+        </tr>
+        <tr>
+            <td>기본 속성 선택자</td>
+            <td>input[name="pw"] {...}</td>
+            <td>태그 중에서 특정 속성 및 값을 가지는 요소를 선택한다</td>
+        </tr>
+       
+    </table>
+    <form action="">
+        <br><br>
+        <p>
+            <input type="text" name="title" placeholder="제목">
+            <input type="text" name="writer" placeholder="작성자">
+        </p>
+        <p>
+            <input type="date" name="birth">
+        </p>
+        <p>
+            <input type="password" name="pw" placeholder="비밀번호">
+        </p>
+        <p>
+            <input type="reset">
+            <input type="submit">
+        </p>
+    </form>
+</body>
+</html>

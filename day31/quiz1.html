@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        div.root {
+            width: 900px;
+            border: 1px solid black;
+        }
+        div.top {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightgrey;
+            padding: 20px;
+        }
+        div.logo {
+            width: 100px;
+            text-align: center;
+            color: white;
+            background-color: aqua;
+            
+        }
+        div.mid {
+            display: flex;
+        }
+        div.side {
+            flex: 1;
+            background-color: black;
+            color: white;
+            padding-left: 10px;
+            padding-top: 10px;
+            margin: 20px 0 20px 0;
+        }
+        div.main { 
+            flex: 4;
+            padding-left: 20px;
+        }
+        div.bottom > p {
+            border-top: 2px solid #222;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>             
+<body>
+    <div class="root">
+        <div class="top">
+            <div class="logo">
+                <h2>LOGO</h2>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="side">
+                <p>Menu 1</p>
+                <p>Menu 2</p>
+                <p>Menu 3</p>
+            </div>
+            <div class="main">
+                <h3>Hello World</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quis, beatae dicta eligendi ea molestias dolorem harum quia deleniti ad quod officia quidem! Sed, unde modi repellendus vitae laborum praesentium.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At corporis animi necessitatibus, quia, maiores, maxime vel ipsa quae nostrum sint beatae nisi eius totam vero ipsam placeat veritatis! Iste, eius!</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>ⓒcopy</p>
+        </div>
+    </div>
+
+</body>
+</html>
