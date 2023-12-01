@@ -11,6 +11,7 @@
         body {
             margin: 0;
             padding: 0;
+            
         }
         .frame {
             width: 1280px;
@@ -38,38 +39,89 @@
             justify-content: center;
             align-items: center;
         }
+        div.top {
+            border-bottom: 1px solid rgb(245, 245, 245);
+        }
         div.top1 {
             border-bottom: 1px solid rgb(252, 252, 252);
+            padding: 20px;
+            margin-bottom: 10px; 
+            margin-top: 20px;
         }
         div.top1 > div.guide {
-            padding: 10px;
             font-weight: bold;
         }
+        
         div.top2 > ul {
             padding-left: 0;
             margin: 0;
-            padding: 10px 0;
             list-style: none;
             flex: 9;
             height: max-content;
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: 700;
         }
         div.top2 > ul > li {
-            flex: 1;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+        div.top2 > ul > li:hover {
+            color: #0055a5;
+        }
+        div.top2 > ul.sb > li {
+            position: relative;
+        }
+        div.top2 > ul.sb > li > ol {
+            position: absolute;
+            top: 41px;
+            left: -10px;
+            width: 267px;
+            list-style: none;
+            padding: 0;
+            padding-bottom: 20px;
+            padding-top: 40px;
+            padding-left: 10px;
+            border: 1px solid lightgrey;
+            background-color: white;
+            border-bottom: 7px solid #0055a5;
+            color: gray;
+            z-index: 2;
+            display: none;
+        }
+        div.top2 > ul.sb > li:hover > ol {
+            display: block;
+        }
+        div.top2 > ul.sb > li > ol > li {
+            padding: 8px;
+        }
+        div.marker {
+            background-color: white;
+            border-top: 1px solid lightgrey;
+            border-left: 1px solid lightgrey;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: -6px;
+            left: 25px;
+            transform: rotateY(45deg) rotate(45deg);
         }
         div.top2 > div.hambuger {
+            text-align: right;            
+            width: 50px;
+            font-size: 30px;
             flex: 1;
         }
         a {
             text-decoration: none;
             color: inherit;
         }
-        a:hover {
-            text-decoration: underline;
-        }
         div.main {
             padding-top: 50px;
+            background-image: url('https://www.nhbank.com/KO/images/main/back1.png'), 
+                              url('https://www.nhbank.com/KO/images/main/back2.png');
+            background-position: -450px top 950px -270px;
+            background-repeat: no-repeat;
         }
         div.main > .text1 {
             padding: 10px;
@@ -83,26 +135,26 @@
         }
         div.news {
             border: 3px solid rgb(0, 85, 165);
-            border-radius: 30px;
+            border-radius: 30px 30px 70px 30px;
             background-color: rgb(0, 85, 165);
-            box-shadow: 3px 3px 3px 0;
+            box-shadow: 3px 3px 7px 0;
         }
         div.subTitle {
             flex: 1;
             padding: 10px;
             color: rgb(0, 85, 165);
-            font-size: 20px;
+            font-size: 26px;
             font-weight: bold;
         }
         div.news > div.left {
             flex: 2;
             background-color: white;
             padding: 10px;
-            border-radius: 30px;
-            box-shadow: 3px 3px 3px 0;
+            border-radius: 30px 30px 70px 30px;
+            box-shadow: 3px 3px 7px 0;
         }
         div.news div.image > img {
-            width: 350px;
+            width: 410px;
             border-radius: 30px;
             padding-right: 20px;
         }
@@ -124,29 +176,48 @@
             color: white;
             font-size: 18px;
         }
-        div.new > div.right > .card1 {
+        div.more {
+            text-align: right;
+        }
+        div.more-1 {
+            padding: 20px;
+        }
+        div.right > .more-1 > .card1 {
             border-bottom: 1px dashed white;
         }
-        div.right > .card2 {
+        div.right > .more-1 > .card2 {
             flex: 1;
+            padding-top: 20px;
         }
         div.greyBox {
             border: 2px solid rgb(187, 203, 217);
+            background-color: white;
             border-radius: 30px;
-            box-shadow: 3px 3px 3px 0;
+            box-shadow: 3px 3px 5px grey;
         }
         div.intro {
             flex: 1;
             margin: 30px 30px 30px 0;
             padding: 15px;
+            background-image: url('green.png');
+            background-size: 100%;
+            background-position: right bottom;
+            border-radius: 30px 30px 75px 30px;
+            
         }
         div.info {
             flex: 1;
             margin: 30px 0 30px 30px;
             padding: 15px;
+            background-image: url('yellow.png');
+            background-size: 100%;
+            background-position: right bottom;
+            border-radius: 30px 30px 75px 30px;
         }
         div.voc { 
             display: flex;
+            flex: 100%;
+            
             padding: 10px;
         }
         div.voc > .img {
@@ -157,9 +228,115 @@
         }
         .com {
             flex: 1;
+            font-size: 18px;
+            color: rgb(124, 125, 167);
         } 
+  
+    div.footer {
+        background-color: #f5f5f5;
+    }
+    .t-blue {
+        color: #0055a5;
+    }
+    .menu,
+    .submenu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .menu{
+        position: relative;
+    }
+    .submenu {
+        font-weight: normal;
+        color: grey;
+        border: 1px solid grey;
+        position: absolute;
+        top: 28;
+        display: none;
+        width: 50%;
+    }
+    .subRead {
+        font-size: 18px;
+        color: grey;
+        padding: 0 10px;
+        margin: 0;
+    }
+    .more-2 {
+        margin: 0;
+        padding: 10px;
+        padding-top: 10px;
+        font-size: 16px;
+        color: grey;
 
-        
+    }
+    menu > li:hover > .submenu {
+        display: block;
+    }
+    div.footer > div.frame {
+        position: relative;   /* 기준 */
+        height: 200px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 17px;
+        font-weight: bold;
+        color: grey;
+        font-family: 'NanumGothic';
+
+    }
+    ul.ft1 {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        width: 500px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+
+    div.ft2 {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+    }
+    div.ft3 {
+        position: absolute;
+        top: 50px;
+        right: 0;
+    }
+    div.ft4 {
+        position: absolute;
+        right: 0;
+        bottom: 50px;
+    }
+
+    div.footer select {
+        padding: 10px 20px;
+        padding-right: 100px;
+        font-size: 20px;
+    }
+
+    div.remocon {
+        width: 70px;
+        height: 70px;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: #0055a5;
+        font-family: 'Consolas';
+        box-shadow: 5px 5px 5px darkgrey;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    div.remocon a {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+   
     </style>
 </head>
 <body>
@@ -170,22 +347,116 @@
                 <img src="농협로고.JPG">
             </div>
             <div class="guide sa">
-                <div>Language </div>
-                <div style="color: rgb(0, 85, 165);">Banking</div>
+                <ul class="menu sb">
+                    <li>Language
+                        <ol class="submenu">
+                            <li>한국어</li>
+                            <li>English</li>
+                            <li>日本語</li>
+                            <li>中國語</li>
+                        </ol>
+                    </li>
+                    <li class="t-blue">
+                        Banking
+                        <ol class="submenu">
+                            <li>개인</li>
+                            <li>기업</li>
+                        </ol>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="top2 frame sb">
             <ul class="sb">
-                    <li class="center"><a href="#">은행안내</a></li>
-                    <li class="center"><a href="#">윤리경영</a></li>
-                    <li class="center"><a href="#">금융소비자보호</a></li>
-                    <li class="center"><a href="#">기업지배구조</a></li>
-                    <li class="center"><a href="#">경영정보</a></li>
-                    <li class="center"><a href="#">ESG경영</a></li>
-                    <li class="center"><a href="#">채용정보</a></li>
-                    <li class="center"><a href="#">홍보센터</a></li>
+                    <li class="center"><a href="#">은행안내</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">CEO인사말</a></li>
+                            <li><a href="#">기업이념</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">조직도</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                            <li><a href="#">영업점안내</a></li>
+                            <li><a href="#">공고</a></li>
+                        </ol>
+                    </li>
+                    <li class="center"><a href="#">윤리경영</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">윤리경영소개</a></li>
+                            <li><a href="#">윤리경영추진전략</a></li>
+                            <li><a href="#">윤리경영추진경과</a></li>
+                            <li><a href="#">윤리경영시스템</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">신고제도</a></li>
+                        </ol>
+                    </li>
+
+                    <li class="center"><a href="#">금융소비자보호</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">금융소비자보호소개</a></li>
+                            <li><a href="#">금용소비자보호체계</a></li>
+                            <li><a href="#">고객의 소리</a></li>
+                            <li><a href="#">금융소비자보호공시</a></li>
+                            <li><a href="#">금융소비자보호우수사례</a></li>
+                            <li><a href="#">금융소비자정보</a></li>
+                            <li><a href="#">금융소비자보호 금융정보포털</a></li>
+                            <li><a href="#">보이스피싱 피해예방</a></li>
+                        </ol>
+                    </li>
+
+                    <li class="center"><a href="#">기업지배구조</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">이사회</a></li>
+                            <li><a href="#">이사회 공시</a></li>
+                        </ol>
+                    </li>
+
+                    <li class="center"><a href="#">경영정보</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">공시</a></li>
+                            <li><a href="#">재무현황</a></li>
+                            <li><a href="#">국제신용등급</a></li>
+                        </ol>
+                    </li>
+
+                    <li class="center"><a href="#">ESG경영</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">ESG경영</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                        </ol>
+                    </li>
+
+                    <li class="center"><a href="#">채용정보</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">인재상</a></li>
+                            <li><a href="#">인사제도</a></li>
+                            <li><a href="#">채용절차</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ol>
+                    </li>
+
+                    <li class="center"><a href="#">홍보센터</a>
+                        <ol>
+                            <div class="marker"></div>
+                            <li><a href="#">NH뉴스</a></li>
+                            <li><a href="#">영상광고</a></li>
+                            <li><a href="#">인쇄광고</a></li>
+                            <li><a href="#">CI</a></li>
+                            <li><a href="#">연차보고서</a></li>
+                            <li><a href="#">올윈프렌즈 캐릭터</a></li>
+                            <li><a href="#">스포츠단</a></li>
+                            <li><a href="#">NH WM마스터즈</a></li>
+                            <li><a href="#">NH농협은행 10년사</a></li>
+                        </ol>
+                    </li>
             </ul>
-            <div class="hambuger center">≣</div>
+            <div class="hambuger">≣</div>
         </div>
     </div>
 
@@ -210,9 +481,9 @@
             </div>
 
             <div class="right">
-                <div class="more"><a href="#"></a>더보기 ></div>
+                <div class="more"><a href="#">더보기 ></a></div>
                 <div class="more-1">
-                    <div class="card1">
+                    <div class="card1" style="border-bottom: 1px dashed white;">
                         <div>H농협은행,『제1회 퇴.연.숨.고&#40;퇴직연금숨은고..</div>
                         <p>2023-11-03</p>
                     </div>
@@ -232,7 +503,8 @@
                 <div class="subTitle">
                     NH농협은행 소개
                 </div>
-                <p>대한민국 행복파트너</p>
+                <p class="subRead">대한민국 행복파트너</p>
+                <p class="more-2"><a href="#">자세히 보기></a></p>
 
             </div>
 
@@ -240,47 +512,81 @@
                 <div class="subTitle">
                     경영정보
                 </div>
-                <p>경영·재무현황 및 공시자료</p>
+                <p class="subRead">경영·재무현황 및 공시자료</p>
+                <p class="more-2"><a href="#">자세히 보기></a></p>
             </div>
         </div>
 
-        <div class="voc frame greyBox">
-            <div class="subTitle" style="text-align: center;">
+        <div class="voc frame center greyBox">
+            <div class="subTitle">
                 고객의 소리
+                <p class="more-2"><a href="#">자세히 보기></a></p>
             </div>
 
-                <div class="civil pic">
-                    <a href="#"><img src="고객소리1.JPG"></a>
-                </div>
-                <div class="civil com">
-                    <p>칭찬/불만/제안/민원</p>
-                </div>
             
             
-                <div class="case pic">
-                    <a href="#"><img src="고객소리2.JPG"></a>
-                </div>
-                <div class="case com">
-                    <p>민원사례(FAQ)</p>
-                </div>
+            <div class="civil pic">
+                <a href="#"><img src="고객소리1.JPG"></a>
+            </div>
+            <div class="civil com">
+                <p><a href="#">칭찬/불만/제안/민원</a></p>
+            </div>
+            <div class="case pic">
+                <a href="#"><img src="고객소리2.JPG"></a>
+            </div>
+            <div class="case com">
+                <p><a href="#">민원사례(FAQ)</a></p>
+            </div>
+            <div class="post pic">
+                <a href="#"><img src="고객소리3.JPG"></a>
+            </div>
+            <div class="post com">
+                <p><a href="#">민원사무편람</a></p>
+            </div>
             
-            
-                <div class="post pic">
-                    <a href="#"><img src="고객소리3.JPG"></a>
-                </div>
-                <div class="post com">
-                    <p>민원사무현함</p>
-                </div>
+        
+        
 
             
         </div>
     </div>
 
     <div class="footer">
-        <div class="footer1 frame">
+        <div class="frame">
+            <ul class="ft1">
+                    <li><a href="#">농협인터넷뱅킹</a></li>
+                    <li><a href="#">농협중앙회</a></li>
+                    <li><a href="#">영업점안내</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">경영공시</a></li>
+            </ul>
+            <div class="ft2">
+                <p>국내 1661-3000/1522-3000 (인터넷전화가능)해외 82-2-3704-1004 100-707 서울중구 통일로 120 NH농협은행</p>
+                <p>COPYRIGHTS (C) 2021 BY NongHyup.ALL RIGHTS RESERVED.</p>  
+            </div>
 
-
+            <div class="ft3">
+                <select name="" id="">
+                    <option>계열사/관련사이트</option>
+                    <option>사상</option>
+                    <option>하단</option>
+                    <option>구포</option>
+                    <option>덕천</option>
+                </select>
+            </div>
+            <div class="ft4">
+                <img src="https://www.nhbank.com/KO/images/common/ICON_youtube_42.png">
+                <img src="https://www.nhbank.com/KO/images/common/ICON_instagram_42.png">
+                <img src="https://www.nhbank.com/KO/images/common/ICON_facebook_42.png">
+                &nbsp;
+                <img src="https://www.nhbank.com/KO/images/common/ICON_wa_pc.png">
+            </div>
         </div>
+
+    </div>
+
+    <div class="remocon center">
+        <a class="center" href="#">↑</a>
     </div>
 
     <input type="color">
