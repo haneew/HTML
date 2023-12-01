@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+            background-color: #eeeeee;
+        }
+        div.container {
+            margin-left: 10px;
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 10px 10px 10px #ccc;
+        }
+        .container div {
+            transition-duration: 0.3s;
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            /* background-image: url('danbi.jpg');
+            background-size: 100px; */
+            position: relative;
+            top: 50px;
+            left: 50px;
+            overflow: hidden;
+        }
+        p {
+            font-size: 14px;
+            margin-top: 60px;
+        }
+        div.scale:active {
+            transform: scale(2);
+        }
+        div.rotate:active {
+            transform: rotate(45deg);
+        }
+        div.skew:active {
+            transform: skew(45deg, 45deg);
+        }
+        div.translate:active {
+            transform: translate(45px, 45px);
+        }
+        div.rotateX:active {
+            transform: perspective(100px)
+                        rotateX(45deg);
+        }
+        div.rotateY:active {
+            transform: perspective(100px)
+                        rotateY(45deg);
+        }
+        div.origin1:active {
+            transform-origin: 100% 0 0;
+            transform: rotate(45deg);
+        }
+        div.origin2:active {
+            transform-origin: bottom left;
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <h1>transform</h1>
+    <hr>
+
+    <div class="container">
+        <div class="scale"></div>
+        <p>scale(2)</p>
+    </div>
+
+    <div class="container">
+        <div class="rotate"></div>
+        <p>rotate(45deg)</p>
+    </div>
+
+    <div class="container">
+        <div class="skew"></div>
+        <p>skew(45deg, 45deg)</p>
+    </div>
+
+    <div class="container">
+        <div class="translate"></div>
+        <p>translate(45px, 45px)</p>
+    </div>
+
+    <p align="center">
+        perspective : 원근감
+    </p>
+
+    <div class="container">
+        <div class="rotateX"></div>
+        <p>rotateX(45deg)</p>
+    </div>
+
+    <div class="container">
+        <div class="rotateY"></div>
+        <p>rotateY(45deg)</p>
+    </div>
+
+    <p align="center">
+        transform-origin : 기준점
+    </p>
+
+    <div class="container">
+        <div class="origin1"></div>
+        <p>transform-origin: 100% 0 0</p>
+    </div>
+
+    <div class="container">
+        <div class="origin2"></div>
+        <p>transform-origin: bottom left</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

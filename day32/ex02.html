@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.back{
+            background-image: url('danbi.jpg'),
+                              url('짱구.png'),
+                              url('danbi.png');
+            background-position: top, center,bottom;
+            background-repeat: repeat-x;
+            background-size: 100px auto;
+            opacity: 0.8;
+            width: 95%;
+        }
+        div.text {
+            background-color: rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+            opacity: 1;
+            border: 1px solid coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>투명한 배경에 또렷한 글자</h1>
+    <hr>
+    <div class="back">
+        <div class="text">
+            <marquee scrollamount="2" direction="up">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde vitae nobis distinctio, accusamus mollitia corporis veritatis aliquid. Impedit, cupiditate, doloribus quisquam ullam eveniet, veritatis in non veniam dicta quod voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, aut maxime reiciendis eaque aspernatur nostrum exercitationem necessitatibus nam at perspiciatis doloremque cupiditate? Itaque, minus? Enim quas deleniti ratione aliquid asperiores.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto rerum pariatur hic quos quia, et, beatae quidem eveniet reiciendis itaque deleniti quam perspiciatis ea cupiditate magnam expedita asperiores delectus dignissimos.</p>
+            </marquee>
+        </div>
+    </div>
+</body>
+</html>

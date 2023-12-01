@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            margin: 10px;
+            padding: 10px;
+            background-color: #eee;
+        }
+        input.active:active {
+            background-color: salmon;
+        }
+        input.focus:focus {
+            background-color: lightgoldenrodyellow;
+        }
+        input.hover:hover {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>상태 선택자</h1>
+    <hr>
+
+    <div class="box">
+        <p>active: 클릭이 유지되는 동안 작동</p>
+        <input type="text" class="active">
+    </div>
+
+    <div class="box">
+        <p>focus: 커서가 위치하는 동안 작동</p>
+        <input type="text" class="focus">
+    </div>
+
+    <div class="box">
+        <p>hover: 마우스가 올라간 동안 작동</p>
+        <input type="text" class="hover">
+    </div>
+</body>
+</html>

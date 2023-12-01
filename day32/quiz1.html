@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .frame {
+            width: 1280px;
+            margin: 0 auto;
+        }
+        body > div {
+            /* border: 2px dashed grey; */
+        }
+        body > div > * {
+            /* border: 2px dashed orangered; */
+        }
+        body > div > * > * {
+            /* border: 2px dashed green; */
+        }
+        .sa {
+            display: flex;
+            justify-content: space-around;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.top1 {
+            border-bottom: 1px solid rgb(252, 252, 252);
+        }
+        div.top1 > div.guide {
+            padding: 10px;
+            font-weight: bold;
+        }
+        div.top2 > ul {
+            padding-left: 0;
+            margin: 0;
+            padding: 10px 0;
+            list-style: none;
+            flex: 9;
+            height: max-content;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        div.top2 > ul > li {
+            flex: 1;
+        }
+        div.top2 > div.hambuger {
+            flex: 1;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        div.main {
+            padding-top: 50px;
+        }
+        div.main > .text1 {
+            padding: 10px;
+            font-size: 55px;
+        }
+        div.main > .text2 {
+            padding: 10px;
+            padding-bottom: 20px;
+            font-size: 20px;
+            color: rgb(146, 148, 143);
+        }
+        div.news {
+            border: 3px solid rgb(0, 85, 165);
+            border-radius: 30px;
+            background-color: rgb(0, 85, 165);
+            box-shadow: 3px 3px 3px 0;
+        }
+        div.subTitle {
+            flex: 1;
+            padding: 10px;
+            color: rgb(0, 85, 165);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        div.news > div.left {
+            flex: 2;
+            background-color: white;
+            padding: 10px;
+            border-radius: 30px;
+            box-shadow: 3px 3px 3px 0;
+        }
+        div.news div.image > img {
+            width: 350px;
+            border-radius: 30px;
+            padding-right: 20px;
+        }
+        div.news > div.nh-news {
+            margin: 10px;
+        }
+        div.blue {
+            width: fit-content;
+            background-color: rgb(0, 85, 165);
+            color: white;
+            font-weight: bold;
+            padding: 2px 6px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        div.news > div.right {
+            flex: 1;
+            padding: 20px;
+            color: white;
+            font-size: 18px;
+        }
+        div.new > div.right > .card1 {
+            border-bottom: 1px dashed white;
+        }
+        div.right > .card2 {
+            flex: 1;
+        }
+        div.greyBox {
+            border: 2px solid rgb(187, 203, 217);
+            border-radius: 30px;
+            box-shadow: 3px 3px 3px 0;
+        }
+        div.intro {
+            flex: 1;
+            margin: 30px 30px 30px 0;
+            padding: 15px;
+        }
+        div.info {
+            flex: 1;
+            margin: 30px 0 30px 30px;
+            padding: 15px;
+        }
+        div.voc { 
+            display: flex;
+            padding: 10px;
+        }
+        div.voc > .img {
+            padding: 30px;
+        }
+        .pic {
+            flex: 0.4;
+        }
+        .com {
+            flex: 1;
+        } 
+
+        
+    </style>
+</head>
+<body>
+    
+    <div class="top">
+        <div class="top1 frame sb">
+            <div class="logo">
+                <img src="농협로고.JPG">
+            </div>
+            <div class="guide sa">
+                <div>Language </div>
+                <div style="color: rgb(0, 85, 165);">Banking</div>
+            </div>
+        </div>
+        <div class="top2 frame sb">
+            <ul class="sb">
+                    <li class="center"><a href="#">은행안내</a></li>
+                    <li class="center"><a href="#">윤리경영</a></li>
+                    <li class="center"><a href="#">금융소비자보호</a></li>
+                    <li class="center"><a href="#">기업지배구조</a></li>
+                    <li class="center"><a href="#">경영정보</a></li>
+                    <li class="center"><a href="#">ESG경영</a></li>
+                    <li class="center"><a href="#">채용정보</a></li>
+                    <li class="center"><a href="#">홍보센터</a></li>
+            </ul>
+            <div class="hambuger center">≣</div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="text1 frame center">사랑받는 <span style="color: rgb(0, 85, 165); font-weight: bold;">일등 민족은행</span></div>
+        <div class="text2 frame center">농업인과 고객 모두가 행복한 금융을 만들어 갑니다</div>
+        
+        <div class="news frame sb">
+            <div class="left">
+                <div class="subTitle">NH 뉴스</div>
+                <div class="sb">
+                    <div class="image">
+                        <img src="https://www.nhbank.com/upload/nhnews/6052/imgpc_1.jpg">
+                    </div>
+                    <div class="nh-news">
+                         <div class="blue">NH뉴스</div>
+                         <p style="font-size: 26px;">NH농협은행, 올원뱅크 생활금융 서비스 신규오픈 이벤트 실시</p>
+                         <p>NH농협은행, 올원뱅크 생활금융 서비스 신규 오픈 이벤트 실시</p>
+                         <p>2023-11-06</p>
+                     </div>
+                 </div>
+            </div>
+
+            <div class="right">
+                <div class="more"><a href="#"></a>더보기 ></div>
+                <div class="more-1">
+                    <div class="card1">
+                        <div>H농협은행,『제1회 퇴.연.숨.고&#40;퇴직연금숨은고..</div>
+                        <p>2023-11-03</p>
+                    </div>
+                    
+                    <div class="card2">
+                        <div>NH농협은행, 농촌일손돕기와 자산관리 상담실시</div>
+                        <p>2023-11-03</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="frame sa">
+            <div class="intro greyBox">
+                <div class="subTitle">
+                    NH농협은행 소개
+                </div>
+                <p>대한민국 행복파트너</p>
+
+            </div>
+
+            <div class="info greyBox">
+                <div class="subTitle">
+                    경영정보
+                </div>
+                <p>경영·재무현황 및 공시자료</p>
+            </div>
+        </div>
+
+        <div class="voc frame greyBox">
+            <div class="subTitle" style="text-align: center;">
+                고객의 소리
+            </div>
+
+                <div class="civil pic">
+                    <a href="#"><img src="고객소리1.JPG"></a>
+                </div>
+                <div class="civil com">
+                    <p>칭찬/불만/제안/민원</p>
+                </div>
+            
+            
+                <div class="case pic">
+                    <a href="#"><img src="고객소리2.JPG"></a>
+                </div>
+                <div class="case com">
+                    <p>민원사례(FAQ)</p>
+                </div>
+            
+            
+                <div class="post pic">
+                    <a href="#"><img src="고객소리3.JPG"></a>
+                </div>
+                <div class="post com">
+                    <p>민원사무현함</p>
+                </div>
+
+            
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer1 frame">
+
+
+        </div>
+    </div>
+
+    <input type="color">
+</body>
+</html>

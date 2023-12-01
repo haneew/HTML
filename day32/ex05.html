@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.overlay {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        div.content {            
+            transition-duration: 1s;     
+            position: fixed;             /* 특정요소가 무조건 한가운데로 보낼때 */
+            top: 100%;                   /* position 부터 transform까지 */
+            left: 50%;
+            transform: translate(-50%, -50%);       
+            background-color: white;
+            box-shadow: 10px 10px 10px black;
+            border-radius: 10px;
+            z-index: 2;
+            padding: 10px;
+        }
+        div.button {
+            position: relative;
+            width: 70px;
+            border: 1px solid red;
+            background-color: white;
+            z-index: 3;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        div.button:hover {
+            background-color: red;
+            color: white;
+        }
+        div.modal {
+            /* display: none; */
+            opacity: 0;
+            transition-duration: 1s;
+            z-index: -1;
+        }
+        div.button:hover + div.modal > div.content {
+            top: 50%;
+            transition-duration: 1s;
+        }
+        div.button:hover + div.modal {
+            /* display: block; */
+            opacity: 1;
+            transition-duration: 1s;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>css 모달</h1>
+    <hr>
+
+    <div id="root">
+        <div class="button">버튼1</div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quas possimus pariatur libero ab recusandae illum dolor iusto dolorem nesciunt, non sint alias ipsam magnam eos eaque, et repellat voluptas?</p>
+            </div>
+        </div>
+
+
+        <div class="button">버튼2</div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="content">
+                <p>
+                    <img src="danbi.jpg" width="200">
+                </p>
+                <p>파란색은 싫어</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
