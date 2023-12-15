@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .frame {
+            width: 1250px;
+            margin: 0 auto;
+        }
+        .bar {
+            border-bottom: 1px solid grey;
+            height: 40px;
+            
+        }
+        body > div {
+            border: 2px dashed grey;
+        }
+        body > div > * {
+            border: 2px dashed orangered;
+        }
+        body > div > * > * {
+            border: 2px dashed green;
+        }
+        .sa {
+            display: flex;
+            justify-content: space-around;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.top1 {
+            background-color: rgb(1, 199, 60);
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        div.bar > div.barLeft {
+            display: flex;
+            margin-bottom: 0;
+        }
+        div.bar > div.barRight {
+            display: flex;
+            height: 35px;
+            margin: 0;
+        }
+        div.menu {
+           display: flex;
+           padding-top: 10px;
+        }
+        div.menu > div.menuLogin > a {
+            border: 1px solid rgb(35, 158, 54);
+            font-size: 13px;
+            color: white;
+            text-decoration: none;
+            margin-right: 30px;
+        }
+        div.navRight {
+            display: flex;
+        }
+        div.navRight > div.market {
+            border: 1px solid gray; 
+            margin: 5px;
+            padding: 4px 10px;
+            background-color: rgb(0, 199, 60);
+            
+        }
+        div.navRight > div.market > a {
+            text-decoration: none;
+            font-size: 13px;
+            color: white;
+        }
+        
+        div.navRight > div.team {
+            border: 1px solid gray; 
+            margin: 5px;
+            padding: 4px 10px;
+        }
+        div.navRight > div.team > a {
+           text-decoration: none;
+           font-size: 13px;
+        }
+        div.navLeft {
+            display: flex;
+        }
+        div.set1 {
+            border-right: 1px solid gray;
+        }
+        div.set1 > ul {
+            display: flex;
+            margin: 0px 0px 0px -30px;
+            
+        }
+        div.set1 > ul > li {
+            list-style: none;
+            margin: 0 10px;
+            padding-top: 10px;
+            padding-bottom: 13px;
+            font-size: 13px;
+        }
+        div.set1 > ul > li:hover {
+            border-bottom: 3px solid rgb(0, 199, 60);
+            font-weight: bold;
+        }
+        div.set2 {
+            margin-left: -40px;
+        }
+        div.set2 > ul {
+            display: flex;
+            margin: auto 0;
+            padding: 0px auto;
+            
+
+        }
+        div.set2 > ul > li {
+            list-style: none;
+            margin: 0 8px;
+            padding-top: 10px;
+            font-size: 13px;
+            padding-bottom: 13px;
+        }
+        div.set2 > ul > li:hover {
+            border-bottom: 3px solid rgb(0, 199, 60);
+            font-weight: bold;
+        }
+
+        div.top3 {
+            background-color: rgb(245, 245, 245);
+            padding: 10px;
+        }
+        div.topicLeft {
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <input type="color">
+    <div class="top1 center">
+        <div class="bar frame sb">
+            <!-- 로고 검색 등 -->
+            <div class="barLeft">
+                <div class="logo">
+                    <a href="#">
+                    <img src="img/LOGO.jpg" height="35">
+                    </a>
+                </div>
+                <select name="category">
+                    <option>글</option>
+                    <option>블로그</option>
+                    <option>별명, 아이디</option>
+                </select>
+                <input type="text">
+                <img src="img/돋보기.JPG" height="35" style="margin: 0 3px; border: 1px solid rgb(35, 158, 54);" >
+                <a href="#" style="color: white; padding-top: 8px; border: 1px solid rgb(35, 158, 54); background-color: rgb(40, 169, 58); font-size: 13px; text-decoration: none;">통합검색</a>
+                <p></p>
+            </div>
+
+
+            <div class="barRight">
+                <!-- 로그인 & 메뉴 -->
+                <div class="menu">
+                    <div class="menuLogin">
+                        <a href="#" >로그인</a>
+                    </div>
+                    <a href="#"><img src="img/menuLogo.jpg" style="height: 30; width: 30; margin: -7px 6px 0px 6px;"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="top2 center">
+        <div class="bar frame sb">
+            <!-- 메뉴 네비게이션 -->
+            <div class="navLeft">
+                <div class="set1">
+                    <ul >
+                        <li>블로그 홈</li>
+                        <li>주제별 보기</li>
+                    </ul>
+                </div>
+                <div class="set2">
+                    <ul>
+                        <li>이달의블로그</li>
+                        <li>공식블로그</li>
+                        <li>챌린지 프로그램</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="navRight">
+                <div class="market">
+                    <a href="#">블로그마켓 가입</a>
+                </div>
+                <div class="team">
+                    <a href="#">블로그팀 공식블로그</a>
+                </div>              
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <div class="top3 center">
+        <div class="bar frame sb">
+            <!-- 핫토픽 & AD -->
+            <div class="tag">
+                 <div class="topic">
+                    <div class="sb">
+                        <div class="topicLeft">
+                            <a href="#"><h4 style="font-weight: bold; color: red;">핫토픽 > </h4></a>
+                            <a href="#"><h4>  최애 디저트</h4></a>
+                        </div>
+
+                        <div class="topicPaging">
+    
+                        </div>
+
+                    </div>
+
+                    <div class="topicImg sa">
+
+                    </div>
+                 </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="mid">
+
+        <div class="main">
+            <div class="neighbor">
+                <!--이웃 -->
+            </div>
+
+            <div class="post">
+                <!-- post 글 -->
+            </div>
+
+            <div class="update">
+                <!--- 업뎃 새글 / 사진미리보기 -->
+            </div>
+
+        </div>
+        
+
+        <div class="side">
+            <div class="login">
+                <!-- 로그인창 -->
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
