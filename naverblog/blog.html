@@ -60,6 +60,7 @@
             color: white;
             text-decoration: none;
             margin-right: 30px;
+            margin-top: 10px;
         }
         div.navRight {
             display: flex;
@@ -75,6 +76,7 @@
             text-decoration: none;
             font-size: 13px;
             color: white;
+            margin-bottom: 30px;
         }
         
         div.navRight > div.team {
@@ -85,6 +87,7 @@
         div.navRight > div.team > a {
            text-decoration: none;
            font-size: 13px;
+           margin: 0 auto;
         }
         div.navLeft {
             display: flex;
@@ -114,16 +117,16 @@
         div.set2 > ul {
             display: flex;
             margin: auto 0;
-            padding: 0px auto;
+            padding: 10px auto;
             
 
         }
         div.set2 > ul > li {
             list-style: none;
-            margin: 0 8px;
-            padding-top: 10px;
+            margin: 10px 8px 0px 8px;
             font-size: 13px;
             padding-bottom: 13px;
+            
         }
         div.set2 > ul > li:hover {
             border-bottom: 3px solid rgb(0, 199, 60);
@@ -134,20 +137,90 @@
             background-color: rgb(245, 245, 245);
             padding: 10px;
         }
-        div.topicLeft {
+        div.topic {
             display: flex;
         }
-        div.topicPging > p {
-            padding: 3px;
+        div.topicLeft {
+            display: flex;
+            flex: 7;
+            margin: 0;
+        }
+        div.topicLeft > a {
+            text-decoration: none;
+        }
+        div.topLeft > h4 {
+            margin: 8px auto;
+        }
+       
+        div.topicPaging > ul{
+            display: flex;
+            list-style: none;
+            margin: 1px;
+            text-decoration: none;
+            padding: 5px;
+            
+        }
+        div.topicPaging > ul  > li {
+            padding: 13px;
             margin: 10px 0px 5px 0;
+            border: 1px solid black;
+            display: flex;
+            text-decoration: none;
+          
+        }
+        div.topicSide {
+            flex: 3;
+        }
+
+        div.topicPaging2 {
+            display: flex;
+        }
+        div.topicPaging2 > ul {
+            display:  flex;
+            list-style: none;
         }
 
         div.topicImg > a {
+            display: block;
             height: 280px;
             width: 280px;
             margin: auto;
             padding: 0;
             
+        }
+        div.main {
+            display: flex;
+        }
+        div.main > div.neighbor {
+            flex : 7;
+            padding: 10px;
+        }      
+
+        div.main > div.neighbor > div.title {
+            font-size: 16px;
+            text-align: center;
+            padding: 30px 0;
+        }
+            
+        div.main > div.neighbor > div.category > ul {
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+            border-top: 1px solid grey;
+            border-bottom: 1px solid grey;
+        }
+        div.main > div.neighbor > div.category > ul > a {
+            padding: 10px 40px;
+            text-decoration: none;
+            font-size: 13px;
+            margin-left: -60px;
+        }
+        div.main > div.neighbor > div.category > ul > a:hover {
+            text-decoration: underline;
+        }
+
+        div.main > div.side {
+            flex: 3;
         }
     </style>
 </head>
@@ -168,7 +241,7 @@
                     <option>별명, 아이디</option>
                 </select>
                 <input type="text">
-                <img src="img/돋보기.JPG" height="35" style="margin: 0 3px; border: 1px solid rgb(35, 158, 54);" >
+                <img src="img/돋보기.JPG" height="35" style="margin: 0 3px 0 0; border: 1px solid rgb(35, 158, 54); height: 40px; width: 40px;" >
                 <a href="#" style="color: white; padding-top: 8px; border: 1px solid rgb(35, 158, 54); background-color: rgb(40, 169, 58); font-size: 13px; text-decoration: none;">통합검색</a>
                 <p></p>
             </div>
@@ -178,9 +251,9 @@
                 <!-- 로그인 & 메뉴 -->
                 <div class="menu">
                     <div class="menuLogin">
-                        <a href="#" >로그인</a>
+                        <a href="#" style="margin-top: -20px;">로그인</a>
                     </div>
-                    <a href="#"><img src="img/menuLogo.jpg" style="height: 30; width: 30; margin: -7px 6px 0px 6px;"></a>
+                    <a href="#"><img src="img/menuLogo.jpg" style="height: 30; width: 30; margin: -10px 0px 0px 6px; border-left: 1px solid grey; padding: 4px;" ></a>
                 </div>
             </div>
 
@@ -211,7 +284,7 @@
             </div>
             <div class="navRight">
                 <div class="market">
-                    <a href="#">블로그마켓 가입</a>
+                    <a href="#" >블로그마켓 가입</a>
                 </div>
                 <div class="team">
                     <a href="#">블로그팀 공식블로그</a>
@@ -222,37 +295,50 @@
 
     </div>
     
-
+<!-- 
     <div class="top3 center">
-        <div class="bar frame sb">
+        <div class="bar frame sb"> -->
             <!-- 핫토픽 & AD -->
-            <div class="tag">
+            <!-- <div class="tag">
                  <div class="topic">
                     <div class="sb">
                         <div class="topicLeft">
-                            <a href="#"><h4 style="font-weight: bold; color: red;">핫토픽 > </h4></a>
-                            <a href="#"><h4>  최애 디저트</h4></a>
+                            <a href="#"><h4 style="font-weight: bold; color: red; margin: 8px auto;  ">핫토픽 >　</h4></a>
+                            <a href="#"><h4 style="margin: 8px auto;">   최애 디저트</h4></a>
                         </div>
-
+                        
                         <div class="topicPaging">
-                            <a href="#"><p>1</p></a>
-                            <a href="#"><p>2</p></a>
-                            <a href="#"><p>3</p></a>
-                            <a href="#"><p>4</p></a>
+                            <ul>
+                                <a href="#"><li>1</li></a>
+                                <a href="#"><li>2</li></a>
+                                <a href="#"><li>3</li></a>
+                                <a href="#"><li>4</li></a>
+                            </ul>
                         </div>
-
+                        <div class="topicImg sa">
+                            <a href="#"><img src="img/떡볶이.jpg" alt="dduk"></a>
+                            <a href="#"><img src="img/타코.jpg" alt="taco"></a>
+                            <a href="#"><img src="img/국화빵.jpg" alt="gukhwa"></a>
+                        </div>
+                        
                     </div>
-
-                    <div class="topicImg sa">
-                        <a href="#"><img src="img/떡볶이.jpg" alt="dduk"></a>
-                        <a href="#"><img src="img/타코.jpg" alt="taco"></a>
-                        <a href="#"><img src="img/국화빵.jpg" alt="gukhwa"></a>
+                    <div class="topicSide">
+                        <div class="topicPaging2">
+                            <ul>
+                                <a href="#"><li>1</li></a>
+                                <a href="#"><li>2</li></a>
+                                <a href="#"><li>3</li></a>
+                            </ul>
+                        </div>
+                        <div class="AD">
+                            <a href="#"><img src="img/광고.jpg"></a>
+                        </div>
                     </div>
                  </div>
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
 
@@ -265,28 +351,41 @@
 
     <div class="mid">
 
-        <div class="main">
+        <div class="main frame">
             <div class="neighbor">
                 <!--이웃 -->
+                <div class="title">
+                    <p>로그아웃 상태입니다.</p>
+                    <p>로그인하여 이웃새글을 확인해보세요.</p>
+                </div>
+                <div class="category">
+                    <ul>
+                        <a href="#" style="color: rgb(0, 199, 60); font-weight: bold;"><li>전체</li></a>
+                        <a href="#"><li>인테리어·DIY</li></a>
+                        <a href="#"><li>반려동물</li></a>
+                        <a href="#"><li>미술·디자인</li></a>
+                        <a href="#"><li>게임</li></a>
+                        <a href="#"><li>맛집</li></a>
+                        <a href="#"><li>원예·재배</li></a>
+                    </ul>
+                    
+                </div>
+                
+                <div class="update">
+                    <!--- 업뎃 새글 / 사진미리보기 -->
+                </div>
             </div>
+            <div class="side">
+                <div class="login">
+                    <!-- 로그인창 -->
 
-            <div class="post">
-                <!-- post 글 -->
+                </div>
             </div>
-
-            <div class="update">
-                <!--- 업뎃 새글 / 사진미리보기 -->
-            </div>
+            
 
         </div>
         
 
-        <div class="side">
-            <div class="login">
-                <!-- 로그인창 -->
-            </div>
-
-        </div>
 
     </div>
 
