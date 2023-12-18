@@ -45,9 +45,12 @@
         }
         div.top1 {
             border-bottom: 1px solid rgb(252, 252, 252);
-            padding: 20px;
             margin-bottom: 10px; 
             margin-top: 20px;
+            padding: 10px;
+        }
+        div.top1 > ul.menu {
+            width: 200px;
         }
         div.top1 > div.guide {
             font-weight: bold;
@@ -154,6 +157,9 @@
             border-radius: 30px 30px 70px 30px;
             box-shadow: 3px 3px 7px 0;
         }
+        div.news > div.left > .sb {
+            margin-bottom: 20px;
+        }
         div.news div.image > img {
             width: 410px;
             border-radius: 30px;
@@ -194,7 +200,7 @@
             border: 2px solid rgb(187, 203, 217);
             background-color: white;
             border-radius: 30px;
-            box-shadow: 3px 3px 5px grey;
+            box-shadow: 10px 5px 10px darkgrey;
         }
         div.intro {
             flex: 1;
@@ -218,8 +224,14 @@
         div.voc { 
             display: flex;
             flex: 100%;
-            
-            padding: 10px;
+            margin-bottom: 40px;
+            padding: 25px;
+            border: 3px solid #0055a555;
+            border-radius: 25px 25px 70px 25px;
+            box-shadow: 10px 5px 10px darkgray;
+
+            box-sizing: border-box;
+            /* 박스 크기를 계산할 때 테두리(+padding)를 포함하여 계산한다 */
         }
         div.voc > .img {
             padding: 30px;
@@ -232,111 +244,118 @@
             font-size: 18px;
             color: rgb(124, 125, 167);
         } 
-  
-    div.footer {
-        background-color: #f5f5f5;
-    }
-    .t-blue {
-        color: #0055a5;
-    }
-    .menu,
-    .submenu {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .menu{
-        position: relative;
-    }
-    .submenu {
-        font-weight: normal;
-        color: grey;
-        border: 1px solid grey;
-        position: absolute;
-        top: 28;
-        display: none;
-        width: 50%;
-    }
-    .subRead {
-        font-size: 18px;
-        color: grey;
-        padding: 0 10px;
-        margin: 0;
-    }
-    .more-2 {
-        margin: 0;
-        padding: 10px;
-        padding-top: 10px;
-        font-size: 16px;
-        color: grey;
+        div.voc div.sb {
+            padding-right: 100px;
+        }
+        div.footer {
+            background-color: #f5f5f5;
+        }
+        .t-blue {
+            color: #0055a5;
+        }
+        .menu,
+        .submenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+            z-index: 5;
+        }
+        .menu{
+            position: relative;
+            font-weight: bold;
+        }
+        .submenu {
+            font-weight: normal;
+            color: grey;
+            border: 1px solid grey;
+            position: absolute;
+            top: 28;
+            display: none;
+            width: 50%;
+        }
+        .menu > li:hover > .submenu {
+            display: block;
+        }
+        .subRead {
+            font-size: 18px;
+            color: grey;
+            padding: 0 10px;
+            margin: 0;
+        }
+        .more-2 {
+            margin: 0;
+            padding: 10px;
+            padding-top: 10px;
+            font-size: 16px;
+            color: grey;
 
-    }
-    menu > li:hover > .submenu {
-        display: block;
-    }
-    div.footer > div.frame {
-        position: relative;   /* 기준 */
-        height: 200px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-size: 17px;
-        font-weight: bold;
-        color: grey;
-        font-family: 'NanumGothic';
+        }
+        div.footer > div.frame {
+            position: relative;   /* 기준 */
+            height: 250px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 17px;
+            font-weight: bold;
+            color: grey;
+            font-family: 'NanumGothic';
 
-    }
-    ul.ft1 {
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-        width: 500px;
-        position: absolute;
-        top: 50px;
-        left: 0;
-    }
+        }
+        ul.ft1 {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            width: 500px;
+            position: absolute;
+            top: 20px;
+            left: 0;
+
+        }
 
 
-    div.ft2 {
-        position: absolute;
-        bottom: 50px;
-        left: 0;
-    }
-    div.ft3 {
-        position: absolute;
-        top: 50px;
-        right: 0;
-    }
-    div.ft4 {
-        position: absolute;
-        right: 0;
-        bottom: 50px;
-    }
+        div.ft2 {
+            position: absolute;
+            bottom: 60px;
+            left: 0;
 
-    div.footer select {
-        padding: 10px 20px;
-        padding-right: 100px;
-        font-size: 20px;
-    }
+        }
+        div.ft3 {
+            position: absolute;
+            top: 50px;
+            right: 0;
+        }
+        div.ft4 {
+            position: absolute;
+            right: 0;
+            bottom: 50px;
+        }
 
-    div.remocon {
-        width: 70px;
-        height: 70px;
-        background-color: white;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        color: #0055a5;
-        font-family: 'Consolas';
-        box-shadow: 5px 5px 5px darkgrey;
-        border-radius: 25px;
-        cursor: pointer;
-    }
-    div.remocon a {
-        display: flex;
-        width: 100%;
-        height: 100%;
-    }
+        div.footer select {
+            padding: 10px 20px;
+            padding-right: 100px;
+            font-size: 20px;
+        }
+
+        div.remocon {
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            color: #0055a5;
+            font-family: 'Consolas';
+            box-shadow: 5px 5px 5px darkgrey;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        div.remocon a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
    
     </style>
 </head>
@@ -348,7 +367,7 @@
                 <img src="농협로고.JPG">
             </div>
             <div class="guide sa">
-                <ul class="menu sb">
+                <ul class="menu sb center">
                     <li>Language
                         <ol class="submenu">
                             <li>한국어</li>
@@ -569,18 +588,19 @@
             <div class="ft3">
                 <select name="" id="">
                     <option>계열사/관련사이트</option>
-                    <option>사상</option>
-                    <option>하단</option>
-                    <option>구포</option>
-                    <option>덕천</option>
+                    <option><a href="#">류</a></option>
+                    <option><a href="#">지</a></option>
+                    <option><a href="#">연</a></option>
+                    <option><a href="#">바</a></option>
+                    <option><a href="#">보</a></option>
                 </select>
             </div>
             <div class="ft4">
-                <img src="https://www.nhbank.com/KO/images/common/ICON_youtube_42.png">
-                <img src="https://www.nhbank.com/KO/images/common/ICON_instagram_42.png">
-                <img src="https://www.nhbank.com/KO/images/common/ICON_facebook_42.png">
+                <a href="https://www.youtube.com/user/nhbankCF"><img src="https://www.nhbank.com/KO/images/common/ICON_youtube_42.png"></a>
+                <a href="https://www.instagram.com/nh.nonghyupbank.official"><img src="https://www.nhbank.com/KO/images/common/ICON_instagram_42.png"></a>
+                <a href="https://www.facebook.com/nhnonghyupbank"><img src="https://www.nhbank.com/KO/images/common/ICON_facebook_42.png"></a>
                 &nbsp;
-                <img src="https://www.nhbank.com/KO/images/common/ICON_wa_pc.png">
+                <a href="https://wa.or.kr/board/list.asp?BoardID=0006"><img src="https://www.nhbank.com/KO/images/common/ICON_wa_pc.png"></a>
             </div>
         </div>
 
@@ -590,6 +610,6 @@
         <a class="center" href="#">↑</a>
     </div>
 
-    <input type="color">
+   
 </body>
 </html>
