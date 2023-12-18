@@ -41,7 +41,7 @@
             width: 100%;
             border-bottom: 1px solid grey;
             position: fixed;
-            top: 0;
+            top: 0; 
             background-color: white;
             z-index: 5;
         }
@@ -92,7 +92,22 @@
             font-weight: bold;
             width: 60px;
             text-align: center;
+            position: relative;
         }
+        nav > ul > li > ol {
+            position: absolute;
+            border: 1px solid black;
+            background-color: white;
+            width: 100px;
+            top: 42px;
+            left: 13px; 
+            padding-left: 0;
+            display: none;
+        }
+        nav > ul > li:hover > ol {
+            display: block;
+        }
+        
         nav > ul:nth-child(2) > li {
             font-size: 14px;
             font-weight: 700;
@@ -215,7 +230,14 @@
             <div class="logo"></div>
             <nav class="sb">
                 <ul>
-                    <li class="textColor2"><a href="">메일</a></li>
+                    <li class="textColor2"><a href="">메일</a>
+                        <ol>
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ol>
+                    </li>
                     <li class="textColor2"><a href="">뉴스</a></li>
                     <li><a href="">게임</a></li>
                     <li><a href="">운세</a></li>
