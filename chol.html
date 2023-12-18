@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
         /*
-            글자색1 : #0499E2
-            글자색2 : #007aff
-            테두리 : 1px solid #e4e4e4
-            버튼배경 : linear-gradient( -45deg, #34bbf0, #0699e2 50%);
-
-
+            글자색1: #0499E2
+            글자색2: #007aff
+            테두리: 1px solid #e4e4e4
+            버튼배경: linear-gradient( -45deg, #34bbf0, #0699e2 50%);
             전체 틀 크기
             .inner {
                 margin: 0 auto;
@@ -20,41 +17,36 @@
                 max-width: 1194px;
             }
 
-            header   : 페이지 상단 내용, nav를 포함하는 경우도 있다
-            nav      : 사이트 주 메뉴 내비게이터, ul/ol로 메뉴를 구성하는 경우가 많다
-            section  : 특정 주제에 대한 내용을 묶는 태그, div와 크게 차이는 없다
-            article  : section하위의 상세 내용, 사이트에 따라 section과 article을 바꿔쓰기도 한다
-            main     : section,article 상위에 묶는 용도로 사용. header/main/footer로 구분한다
-            footer   : 하단 고정 내용
-            aside    : 왼쪽/오른쪽 측면 메뉴, 광고 및 서브 메뉴 내비게이터로 사용. fixed를 걸기도 한다
+            header  : 페이지 상단 내용, nav를 포함하는 경우도 있다
+            nav     : 사이트 주 메뉴 내비게이터, ul/ol 로 메뉴를 구성하는 경우가 많다
+            section : 특정 주제에 대한 내용을 묶는 태그, div와 크게 차이는 없다
+            article : section 하위의 상세 내용. 사이트에 따라 section과 article을 바꿔쓰기도 한다
+            main    : section, article 상위에 묶는 용도로 사용. header/main/footer로 구분한다
+            footer  : 하단 고정 내용
+            aside   : 왼쪽/오른쪽 측면 메뉴. 광고 및 서브 메뉴 내비게이터로 사용. fixed를 걸기도 한다
         */
-        /* header  { border: 1px dashed red; }
-        nav     { border: 1px dashed orangered; }
-        section { border: 1px dashed orange; }
-        article { border: 1px dashed green; }
-        main    { border: 1px dashed skyblue; }
-        footer  { border: 1px dashed blue; }
-        aside   { border: 1px dashed violet; } */
-
-
+        /* header   { border: 1px dashed red; } */
+        /* nav      { border: 1px dashed orangered; } */
+        /* section  { border: 1px dashed orange; } */
+        /* article  { border: 1px dashed green; } */
+        /* main     { border: 1px dashed skyblue; } */
+        /* footer   { border: 1px dashed blue; } */
+        /* aside    { border: 1px dashed violet; } */
 
         body {
             margin: 0;
             padding: 0;
         }
         header {
-            box-sizing: border-box;
             width: 100%;
             border-bottom: 1px solid grey;
             position: fixed;
             top: 0;
-            left: 50%;
-            transform: translate(-50%,0);
             background-color: white;
             z-index: 5;
         }
         header + main {
-            margin-top: 62px;;
+            margin-top: 62px;
         }
         a {
             text-decoration: none;
@@ -63,19 +55,18 @@
         ul, ol {
             list-style: none;
             padding-left: 0;
-
         }
-        h1, h2, h3, h4, h4, h5, h6 {
+        h1, h2, h3, h4, h5, h6 {
             margin-bottom: 0;
         }
         .inner {
             margin: 0 auto;
             padding: 0 57px;
             max-width: 1194px;
-            /* border-left: 2px dashed green;
-            border-right: 2px dashed green; */
+            /* border-left: 2px dashed green; */
+            /* border-right: 2px dashed green; */
         }
-        .logo{
+        .logo {
             background-image: url('https://www.chol.com/common/img/main/logo.png');
             background-repeat: no-repeat;
             background-position: center left;
@@ -105,19 +96,16 @@
         nav > ul:nth-child(2) > li {
             font-size: 14px;
             font-weight: 700;
-            width: 50px;
         }
-         /* nav 밑에 있는 div지정 */
-        nav + div {    
+        nav + div {
             display: flex;
             align-items: center;
         }
         .textColor1 {
             color: #0499E2;
-            
         }
         .textColor2 {
-            color : #007aff;
+            color: #007aff;
         }
         .title {
             align-items: center;
@@ -134,25 +122,25 @@
             position: relative;
         }
         .left-arrow {
-            left: -30px;
+            left: -40px;
         }
         .right-arrow {
-            right: -30px;
+            right: -40px;
         }
         .left-arrow,
         .right-arrow {
             position: absolute;
             top: 50%;
             transform: translate(0, -50%);
-            background-color: #dadada;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 30px;
-            width: 30px;
-            height: 30px;
             border-radius: 50%;
+            width: 30px !important;
+            height: 30px !important;
+            background-color: #dadada !important;   
         }
         section.login {
             display: flex;
@@ -174,57 +162,57 @@
             font-size: 18px;
         }
         section.login > button.login {
-            background: linear-gradient( -45deg, #34bbf0, #0699e2 50%);
+            background: linear-gradient(-45deg, #34bbf0, #0699e2 50%);
             color: white;
             font-weight: bold;
         }
-        section.login > button:not(.login){
+        section.login > button:not(.login) {
             color: #888;
             font-weight: 100;
         }
-        div.showLeft {
-            margin-right: 20px;
+        section.rec {
+            height: 450px;
+            background-color: aliceblue;
         }
-        div.showLeft > div.showItem {
-            width: 600px;
-            height: 340px;
-            margin: 10px 0;
-            background-color: skyblue;
+        .rec .sb {
+            height: 400px;
         }
-        div.showRight {
-            margin-left: 20px;
+        .rec .sb > div {
+            width: 49%;
+            background-color: lightpink;
+            height: 100%;
         }
-        div.showTop,
-        div.showBottom {
-            width: 107%;
+        .sub-list {
+            /* flex wrap에서 요소가 2줄 이상 나타난다면 align-content 로 여러 줄의 간격을 정렬 */
+            /* 혹은, flex wrap 으로 배치에 대한 순서만 지정하고 개별적인 여백을 지정할 수 있다 */
+            display: flex;
+            flex-flow: wrap;
         }
-        div.showRight > div.showTop > div.showItem {
-            background-color: skyblue;
-            width: 260px;
-            height: 150px;
-            margin: 10px 0 20px 0;
+        div.sub-video {
+            background-color: lightgreen;
+            width: 285px;
+            height: 190px;
+            box-sizing: border-box;
         }
-        div.showRight > div.showBottom > div.showItem {
-            background-color: skyblue;
-            width: 260px;
-            height: 150px;
-            margin: 20px 0 10px 0;
+        div.sub-video:nth-child(2n + 1) {   /* 홀수 */
+            margin-right: 15px;
+        }
+        div.sub-video:first-child,
+        div.sub-video:nth-child(2) {
+            margin-bottom: 18px;
         }
         video {
             width: 100%;
             height: 100%;
         }
-        
 
     </style>
 </head>
 <body>
+    
     <header class="">
         <div class="inner flex">
-            <div class="logo">
-    
-            </div>
-
+            <div class="logo"></div>
             <nav class="sb">
                 <ul>
                     <li class="textColor2"><a href="">메일</a></li>
@@ -239,13 +227,13 @@
                     <li class="textColor1"><a href="">SMS</a></li>
                 </ul>
             </nav>
-            <div><a href="">서비스 전체보기<span class="hbg">≣</span></a></div>
+            <div><a href="">서비스 전체보기<span class="hbg">≡</span></a></div>
         </div>
-    </header>
+    </header>  
 
     <main>
         <section class="login inner">
-            <span class="hello textColor1">안녕하세요</span>
+            <span class="hello textColor1">안녕하세요.</span>
             <button class="login">로그인</button>
             <button>회원가입</button>
         </section>
@@ -254,10 +242,11 @@
             <div class="news sb">
                 <div class="title">
                     뉴스
-                    <a href=""><button>전체 ≣</button></a>
+                    <a href=""><button>전체 ≡</button></a>
                 </div>
                 <div>더보기</div>
             </div>
+
             <div class="sb rel">
                 <div class="item">
                     <div class="news-image"></div>
@@ -284,58 +273,73 @@
                     <div class="news-title"></div>
                     <div class="news-press"></div>
                 </div>
-                <div class="left-arrow"><</div>
-                <div class="right-arrow">></div>
+                <div class="left-arrow">&lt;</div>
+                <div class="right-arrow">&gt;</div>
             </div>
-        </section>  
-        
+
+        </section>
+
+        <section class="rec">
+            <div class="inner">
+                <h2>당신을 위한 추천 영상</h2>
+
+                <div class="sb rel">
+                    <div class="main-video">
+                        <video src="test.mp4" 
+                               muted="muted" 
+                               autoplay="autoplay"
+                               controls="controls"></video>
+                    </div>
+                    <div class="sub-list">
+                        <div class="sub-video">1</div>
+                        <div class="sub-video">2</div>
+                        <div class="sub-video">3</div>
+                        <div class="sub-video">4</div>
+                    </div>
+                    <div class="left-arrow">&lt;</div>
+                    <div class="right-arrow">&gt;</div>
+                </div>
+
+            </div>
+        </section>
+
         <section class="inner">
-
-            <div class="sb">
-                <div class="foryou">
-                    <h2>당신을 위한 추천 영상</h2>
+            <div class="news sb">
+                <div class="title">
+                    뉴스
+                    <a href=""><button>전체 ≡</button></a>
                 </div>
-                <div class="paging">
-                    <!-- paging -->
-                </div>
+                <div>더보기</div>
             </div>
 
-
-
-            <div class="show flex sb">
-               <div class="sb">
-                   <div class="showLeft">
-                       <!-- 큰 영상 -->
-                       <div class="showItem">
-                            <video src="test.mp4"
-                            muted="muted" autoplay="autoplay" controls="controls"></video>
-                        </div>
-                   </div>
-                   <div class="showRight ">
-                       <div class="showTop sb">
-                           <!--작은 영상-->
-                           <div class="showItem">
-                                <div class="show-image"></div>
-                                <div class="show-title"></div>
-                           </div>
-                           <div class="showItem">
-                            <div class="show-image"></div>
-                            <div class="show-title"></div>
-                       </div>
-                       </div>
-                       <div class="showBottom sb">
-                           <!--작은 영상-->
-                            <div class="showItem">
-                                <div class="show-image"></div>
-                                <div class="show-title"></div>
-                            </div>
-                            <div class="showItem">
-                                <div class="show-image"></div>
-                                <div class="show-title"></div>
-                            </div>
-                       </div>
-                   </div>
-               </div>
+            <div class="sb rel">
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="left-arrow">&lt;</div>
+                <div class="right-arrow">&gt;</div>
             </div>
 
         </section>
@@ -343,7 +347,8 @@
 
     <footer class="inner">
         <div>
-            <ul class="sb" style="margin: 20px auto; width: 60%;">
+            <ul class="sb" style="margin: 20px auto; 
+                                    width: 60%;">
                 <li><a href="">회사소개</a></li>
                 <li><a href="">제휴문의</a></li>
                 <li><a href="">개인정보처리방침</a></li>
@@ -356,8 +361,7 @@
             copyright
         </p>
     </footer>
-
-
+   
 
 </body>
 </html>
