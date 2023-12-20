@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* header   { border: 1px dashed red; } 
+        nav      { border: 1px dashed orangered; }
+        section  { border: 1px dashed orange; }
+        article  { border: 1px dashed green; }
+        main     { border: 1px dashed skyblue; }
+        footer   { border: 1px dashed blue; }
+        aside    { border: 1px dashed violet; } */
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+            padding-left: 0;;
+        }
+        header {
+            border-bottom: 1px solid lightgray;
+            border-top: 1px solid lightgray;
+        }
+        .frame {
+            /* border: 1px dashed black; */
+            margin: 0 auto;
+            max-width: 1170px;
+        }
+        .flex {
+            display: flex;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        .sa {
+            display: flex;
+            
+        }
+        .rel {
+            position: relative;
+        }
+        .logo > img {
+            width: 250px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+        }
+        .nav {
+            align-items: center;
+           
+        }
+        nav.big {
+            width: 860px
+        }
+        div.navbar {
+            border: 1px solid lightgray;
+        }
+        div.navbarleft {
+            padding: 5px;
+            margin-top: 5px;
+            
+        }
+        div.navbarleft > a {
+            padding: 9px 1px;
+        }
+        div.navbarright {
+            padding: 5px;
+            margin-top: 5px;
+            font-size: 13px;
+        }
+     
+        div.menu > ul > ol > li {
+            flex: 1;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            font-size: 15px;
+        }
+        
+        div.bannerBg {
+            background-image: image('img/banner_bg');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 1150px;
+            height: 400px;
+        }
+        div.box {
+            border: 1px solid lightgray;
+        }
+        section.list1 {
+            padding: 40px 0;
+            
+        }
+        div.list1left {
+            
+            width: 379px;
+            height: 230px;
+            padding: 0;
+        }
+        div.text {
+            width: 379px;
+            height: 230px;
+            padding: 10px
+        }
+        div.event,
+        div.plus {
+            width: 186px;
+            height: 46px;
+        }
+        div.event {
+            background-color: #ffe400;
+            color: #535353;
+            font-weight: bold;
+        }
+        div.event > a {
+            padding: 13px 15px;
+            font-size: 14px;
+        }
+
+        div.plus {
+            background-color: #d7d7d7;
+            color: #fff;
+            font-weight: bold;
+        }
+        div.plus > a {
+            padding: 13px 15px;
+            font-size: 14px;
+        }
+        div.notice {
+            width: 372px;
+            height: 184px;
+            
+        }
+        div.list {
+            /* background-color: hotpink; */
+        }
+        div.listitem {
+            font-size: 13px;
+            height: 41px;
+           
+        }
+        section.list2 {
+            padding: 40px 0;
+            
+
+        }
+        div.ad {
+            justify-content: space-between;
+        }
+        
+        div.bar {
+            width: 370px;
+            height: 46px;
+            background-color: #ffe400;
+            color: #535353;
+            font-weight: bold;
+        }
+        div.bar > a {
+            padding: 13px 15px;
+            font-size: 14px;
+        }
+        div.item {
+            font-size: 14px;
+        }
+        div.box2 {
+            padding: 10px;
+            width: 355px;
+        }
+        div.itemset {
+            padding: 10px;
+        }
+        div.title {
+            width: 370px;
+        }
+        section.list4 {
+            padding: 30px 0;
+        }
+        section.list5 {
+            padding: 30px 0;
+        }
+        div.footer {
+            background-color: black;
+            color: white;
+            display: flex;
+            
+        }
+        
+     </style>
+</head>
+<body>
+    
+    <header>
+        <div class="frame sb">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+
+            <nav class="big">
+                <div class="navbar sb">
+                    <div class="navbarleft">
+                        <a href=""><img src="img/link_facebook.png" alt=""></a>
+                        <a href=""><img src="img/link_naverblog.png" alt=""></a>
+                        <a href=""><img src="img/post.png" alt=""></a>
+                        <a href=""><img src="img/youtube.png" alt=""></a>
+                    </div>
+
+
+                    <div class="navbarright">
+                        <a href="">로그인</a>
+                        <a href="">회원가입</a>
+                        <a href=""><input type="text" placeholder="검색"></a>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <ul>
+                        <ol class="flex">
+                            <li><a href="">이벤트</a></li>
+                            <li><a href="">공지▼</a></li>
+                            <li><a href="">메인리뷰▼</a></li>
+                            <li><a href="">회원리뷰▼</a></li>
+                            <li><a href="">소식▼</a></li>
+                            <li><a href="">게임</a></li>
+                            <li><a href="">커뮤니티▼</a></li>
+                            <li><a href="">공터▼</a></li>
+                            <li><a href="">특가</a></li>
+                        </ol>
+                    </ul>
+                </div>
+            </nav>
+
+
+
+
+
+
+
+
+        </div>
+
+    </header>
+    
+
+    <section class="banner">
+        <div class="frame">
+            <div class="bannerBg">
+                
+            </div>
+
+            <div class="control sb">
+                <div class="controlleft">
+
+                </div>
+                <div class="controlright">
+
+                </div>
+            </div>    
+        </div>
+    </section>
+
+    <section class="list1 frame sb">
+        <div class="list1Left ">
+            <div class="box flex">
+                <img src="img/list1add.jpg" alt="">
+                <div class="text">
+                    <a href="">
+                        <h4>GIGABYTE Radeon™ RX 7600 Gaming OC D6 8GB</h4>
+                        <p>AMD의 그래픽카드 RX 7000 시리즈의 메인스트림급 VGA RX 7600이 출시되었습니다.사실상 하이엔드에서는 RTX 4000시리즈에 밀리고 있는 상황에서 AMD측에서는 그나마 불행중 다행이라고 할 수 있는 점은 RTX 4060시리즈가 악평을 받고 있다는 점입니다. </p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="list1right">
+            <!-- 상위 메뉴 / 아래 공지 -->
+            <div class="box">
+                <div class="righttop sb">
+                    <div class="event sb">
+                        <a href="">이벤트 특가</a>
+                        <a href="">+</a>
+                    </div>
+                    <div class="plus sb">
+                        <a href="">플웨즈 공지</a>
+                        <a href="">+</a> 
+                    </div>
+                </div>
+
+                <div class="notice">
+                    <div class="list">
+                        <div class="listitem sa">
+                            <p>
+                                <a href="">> WD_BLACK AN1500 SSD 댓글 이벤트</a>
+                            </p>
+                            <p><a href="">29</a></p>
+                            <p>2020-12-23</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                                <a href="">> 씨게이트 바라쿠다 2TB 최저가 맞추기</a>
+                            </p>
+                            <p><a href="">815</a></p>
+                            <p>2018-11-21</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                               <a href=""> > 컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a>
+                            </p>
+                            <p><a href="">11</a></p>
+                            <p>2018-10-23</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                               <a href="">> (재선정)씨게이트 14TB HDD 런칭 기념</a>
+                            </p>
+                            <p><a href="">159</a></p>
+                            <p>2018-10-19</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                               <a href="">> 컬러풀 CN600S SSD 240GB 퀴즈 이벤</a>
+                            </p>
+                            <p><a href="78"></a></p>
+                            <p>2018-10-16</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="list2 frame">
+        <div class="ad flex ">
+            <div><a href=""><img src="img/ad1.jpg" alt=""></a></div>
+            <div><a href=""><img src="img/ad2.jpg" alt=""></a></div>
+            <div><a href=""><img src="img/ad3.jpg" alt=""></a></div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="list1 frame sb">
+        <div class="list1Left ">
+            <div class="box flex">
+                <div class="text">
+                    <a href="">
+                        <h4>마이크로소프트 이그나이트 2023 컨퍼런스 댓글 재방송 중계[2차 - 'CO-Pilot'을 통한 AI(인공지능) 기반 조직으로 거듭나기]</h4>
+                        <p>본래 2023년 11월 16일 새벽 2시 45분부터 시작할려고 했으나, 개인 및 업무 사정으로 인하여 부득이하게 12월 연말 지나기 직전에 진행하게 되었습니다.  </p>
+                    </a>
+                </div>
+                <img src="img/listadd2.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <div class="list1right">
+            <!-- 상위 메뉴 / 아래 공지 -->
+            <div class="">
+                <div class="title sb">
+                    <div class="event sb">
+                        <a href="">H/W 견적</a>
+                        <a href="">+</a>
+                    </div>
+                    
+                </div>
+
+                <div class="notice">
+                    <div class="list">
+                        <div class="listitem sa">
+                            <p>
+                                <a href="">> WD_BLACK AN1500 SSD 댓글 이벤트</a>
+                            </p>
+                            <p><a href="">29</a></p>
+                            <p>2020-12-23</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                                <a href="">> 씨게이트 바라쿠다 2TB 최저가 맞추기</a>
+                            </p>
+                            <p><a href="">815</a></p>
+                            <p>2018-11-21</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                               <a href=""> > 컬러풀 삼행시 짓고 LOL 결승가자! 댓글</a>
+                            </p>
+                            <p><a href="">11</a></p>
+                            <p>2018-10-23</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                               <a href="">> (재선정)씨게이트 14TB HDD 런칭 기념</a>
+                            </p>
+                            <p><a href="">159</a></p>
+                            <p>2018-10-19</p>
+                        </div>
+                        <div class="listitem sa">
+                            <p>
+                               <a href="">> 컬러풀 CN600S SSD 240GB 퀴즈 이벤</a>
+                            </p>
+                            <p><a href="78"></a></p>
+                            <p>2018-10-16</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="list5 frame sb sa">
+        <div class="">
+            <div class="title ">
+                <div class="bar sb">
+                    <a href="">H/W 게시판</a>
+                    <a href="">+</a>
+                </div>
+                <div class="box2">
+                    <div class="item sb">
+                        <a href=""><p>AMD 시스템에 사용하는 그래픽카</p></a>
+                        <a href=""><p>2023-07-04</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>채굴 용도로 사용하던 사파이어 라데</p></a>
+                        <a href=""><p>2023-03-18</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>이번 AMD 라이젠 라파엘 출시로 P</p></a>
+                        <a href=""><p>2022-09-28</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>5년 만에 그래픽카드를 MSI 지포스</p></a>
+                        <a href=""><p>2022-06-01</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>PCIe4.0의 미친 속도 씨게이트 파이</p></a>
+                        <a href=""><p>2021-08-30</p></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="">
+            <div class="title ">
+                <div class="sb">
+                    <div class="event sb">
+                        <a href="">인기 회원리뷰</a>
+                        <a href="">+</a>
+                    </div>
+                    <div class="plus sb">
+                        <a href="">회원리뷰</a>
+                        <a href="">+</a> 
+                    </div>
+                </div>
+                <div class="box2">
+                <div class="itemset sb">
+                    <div>
+                        <a href=""><img src="img/item2_3.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href=""><p>Dr.MOS 전원부 바이오스타</p></a>
+                        <a href=""><p> 제이씨현에서 새롭게 선보이는 바이오스타</p></a>
+                    </div>
+                </div>
+                <div class="itemset sb">
+                    <div>
+                        <a href=""><img src="img/item2.jpg" alt=""></a>
+                    </div>
+                    <div>
+                        <a href=""><p>Dr.MOS 전원부 바이오스타</p></a>
+                        <a href=""><p> 제이씨현에서 새롭게 선보이는 바이오스타</p></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            
+        </div>
+        <div class="">
+            <div class="title ">
+                <div class="sb">
+                    <div class="event sb">
+                        <a href="">H/W 갤러리</a>
+                        <a href="">+</a>
+                    </div>
+                    <div class="plus sb">
+                        <a href="">자유갤러리</a>
+                        <a href="">+</a> 
+                    </div>
+                </div>
+                <div class="box2">
+                    <div class="itemset sb">
+                        <div>
+                            <a href=""><img src="img/item2_3.jpg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><p>Dr.MOS 전원부 바이오스타</p></a>
+                            <a href=""><p> 제이씨현에서 새롭게 선보이는 바이오스타</p></a>
+                        </div>
+                    </div>
+                    <div class="itemset sb">
+                        <div>
+                            <a href=""><img src="img/item2.jpg" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><p>Dr.MOS 전원부 바이오스타</p></a>
+                            <a href=""><p> 제이씨현에서 새롭게 선보이는 바이오스타</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </section>      
+
+    <section class="list4 frame sb sa">
+        <div class="">
+            <div class="title ">
+                <div class="bar sb">
+                    <a href="">H/W 게시판</a>
+                    <a href="">+</a>
+                </div>
+                <div class="box2">
+                    <div class="item sb">
+                        <a href=""><p>AMD 시스템에 사용하는 그래픽카</p></a>
+                        <a href=""><p>2023-07-04</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>채굴 용도로 사용하던 사파이어 라데</p></a>
+                        <a href=""><p>2023-03-18</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>이번 AMD 라이젠 라파엘 출시로 P</p></a>
+                        <a href=""><p>2022-09-28</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>5년 만에 그래픽카드를 MSI 지포스</p></a>
+                        <a href=""><p>2022-06-01</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>PCIe4.0의 미친 속도 씨게이트 파이</p></a>
+                        <a href=""><p>2021-08-30</p></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="">
+            <div class="title ">
+                <div class="bar sb">
+                    <a href="">H/W 게시판</a>
+                    <a href="">+</a>
+                </div>
+                <div class="box2">
+                    <div class="item sb">
+                        <a href=""><p>AMD 시스템에 사용하는 그래픽카</p></a>
+                        <a href=""><p>2023-07-04</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>채굴 용도로 사용하던 사파이어 라데</p></a>
+                        <a href=""><p>2023-03-18</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>이번 AMD 라이젠 라파엘 출시로 P</p></a>
+                        <a href=""><p>2022-09-28</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>5년 만에 그래픽카드를 MSI 지포스</p></a>
+                        <a href=""><p>2022-06-01</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>PCIe4.0의 미친 속도 씨게이트 파이</p></a>
+                        <a href=""><p>2021-08-30</p></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="">
+            <div class="title ">
+                <div class="bar sb">
+                    <a href="">H/W 게시판</a>
+                    <a href="">+</a>
+                </div>
+                <div class="box2">
+                    <div class="item sb">
+                        <a href=""><p>AMD 시스템에 사용하는 그래픽카</p></a>
+                        <a href=""><p>2023-07-04</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>채굴 용도로 사용하던 사파이어 라데</p></a>
+                        <a href=""><p>2023-03-18</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>이번 AMD 라이젠 라파엘 출시로 P</p></a>
+                        <a href=""><p>2022-09-28</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>5년 만에 그래픽카드를 MSI 지포스</p></a>
+                        <a href=""><p>2022-06-01</p></a>
+                    </div>
+                    <div class="item sb">
+                        <a href=""><p>PCIe4.0의 미친 속도 씨게이트 파이</p></a>
+                        <a href=""><p>2021-08-30</p></a>
+                    </div>
+                </div>
+            </div>
+
+
+            
+        </div>
+    </section>         
+
+    <div class="bottom frame">
+        <a href=""><img src="img/botlogo.JPG" alt=""></a>
+    </div>
+
+<footer>
+
+    <div class="footer frame">
+        <div class="info1">
+            <h3>플레이웨이즈</h3>
+            <p>대표 : 박성진</p>
+            <p></p>
+        </div>
+        <div class="info2">
+            <h3>CONTECT US</h3>
+        </div>
+        <div class="info3">
+            <h3>INFORMATION</h3>
+        </div>
+
+    </div>
+
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
